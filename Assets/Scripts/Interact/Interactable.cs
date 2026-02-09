@@ -35,6 +35,6 @@ public class Interactable : MonoBehaviour
 
     public void Interact()
     {
-        DialogueManager.GetDialogueManager().ActivateDialogue(dialogue);
+        DialogueManager.GetDialogueManager().TriggerDialogue(dialogue);
     }
 }

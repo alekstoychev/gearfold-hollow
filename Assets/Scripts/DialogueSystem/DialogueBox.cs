@@ -25,14 +25,7 @@ namespace DialogueSystem
         public void ShowDialogueBox(Dialogue dialogueToAdd)
         {
             speakerTitleBox.text = dialogueToAdd.speakerName;
-            if (dialogueToAdd.isInvolved)
-            {
-                fullDialogue = dialogueToAdd.GetCurrentObjectiveRandomDialogue();
-            }
-            else
-            {
-                fullDialogue = dialogueToAdd.GetRandomDialogue();
-            }
+            fullDialogue = dialogueToAdd.GetDialogue();
             
             dialogueBoxBackground.enabled = true;
             dialogueBoxBackground2.enabled = true;

@@ -7,16 +7,27 @@ using Random = UnityEngine.Random;
 namespace DialogueSystem
 {
     [Serializable]
-    public struct ObjectiveDialogue
+    public class ObjectiveDialogue
     {
         public string objectiveName;
         
-        public List<string> randomDialogue;
-        public int lastDialogueIdx;
+        [SerializeField] private List<string> randomDialogue;
+        private int lastDialogueIdx;
+
+        [SerializeField] private List<string> objectiveDialoguesText;
+        private int currentIdx;
+
+        public string GetObjectiveDialogue()
+        {
+            if (currentIdx < objectiveDialoguesText.Count)
+            {
+                return objectiveDialoguesText[currentIdx++];
+            }
+            
+            return GetRandomDialogue();
+        }
         
-        
-        
-        public string GetRandomDialogue()
+        private string GetRandomDialogue()
         {
             int randomIndex = Random.Range(0, randomDialogue.Count);
             if (randomDialogue.Count > 1)
@@ -26,14 +37,23 @@ namespace DialogueSystem
                     randomIndex = Random.Range(0, randomDialogue.Count);
                 }
             }
+            else
+            {
+                return "...";
+            }
             
             lastDialogueIdx = randomIndex;
             return randomDialogue[randomIndex];
         }
+
+        public bool IsInObjectiveDialogue()
+        {
+            return currentIdx < objectiveDialoguesText.Count;
+        }
     }
     
     [Serializable] 
-    public struct Dialogue
+    public class Dialogue
     {
         public string speakerName;
     
@@ -41,16 +61,29 @@ namespace DialogueSystem
         public Sprite expression2;
 
         // Whenever the object is interacted with when NOT involved in an objective
-        public List<string> randomDialogue; 
+        [SerializeField] private List<string> randomDialogue; 
         // Whenever the object is interacted with when involved in an objective
-        public List<ObjectiveDialogue> objectiveDialogues;
+        [SerializeField] private List<ObjectiveDialogue> objectiveDialogues;
 
         public string currentObjective;
         public bool isInvolved;
         
-        public int lastDialogueIdx;
+        private int lastDialogueIdx;
 
-        public string GetRandomDialogue()
+        public string GetDialogue()
+        {
+            if (isInvolved)
+            {
+                if (GetCurrentObjective()  != null)
+                {
+                    return GetCurrentObjective().GetObjectiveDialogue();
+                }
+            }
+            
+            return GetRandomDialogue();
+        }
+        
+        private string GetRandomDialogue()
         {
             int randomIndex = Random.Range(0, randomDialogue.Count);
             if (randomDialogue.Count > 1)
@@ -60,35 +93,63 @@ namespace DialogueSystem
                     randomIndex = Random.Range(0, randomDialogue.Count);
                 }
             }
+            else
+            {
+                return "...";
+            }
             
             lastDialogueIdx = randomIndex;
             return randomDialogue[randomIndex];
         }
 
-        public string GetCurrentObjectiveRandomDialogue()
+        private ObjectiveDialogue GetCurrentObjective()
         {
             foreach (ObjectiveDialogue objectiveDialogue in objectiveDialogues)
             {
                 if (objectiveDialogue.objectiveName == currentObjective)
                 {
-                    int index =  Random.Range(0, objectiveDialogue.randomDialogue.Count);
-                    if (index == objectiveDialogue.lastDialogueIdx)
-                    {
-                        index = Random.Range(0, objectiveDialogue.randomDialogue.Count);
-                    }
-                    
-                    lastDialogueIdx = index;
-                    return objectiveDialogue.randomDialogue[index];
+                    return objectiveDialogue;
+                }
+            }
+
+            return null;
+        }
+
+        public bool CanRemoveDialogue()
+        {
+            if (isInvolved)
+            {
+                if (GetCurrentObjective()  != null)
+                {
+                   return !GetCurrentObjective().IsInObjectiveDialogue();
                 }
             }
             
-            return "";
+            return true;
         }
     }
 
     public class DialogueManager : MonoBehaviour
     {
         public DialogueBox dialogueBox;
+        
+        private Dialogue currentDialogue;
+        private bool isDialogueActive;
+        
+        public void TriggerDialogue(Dialogue dialogue) // new
+        {
+            currentDialogue = dialogue;
+            if (isDialogueActive && currentDialogue.CanRemoveDialogue())
+            {
+                DeactivateDialogue();
+                isDialogueActive = false;
+            }
+            else
+            {
+                ActivateDialogue(dialogue);
+                isDialogueActive = true;
+            }
+        }
 
         // Debugging test method
         public void ActivateDialogue(Dialogue dialogue) 

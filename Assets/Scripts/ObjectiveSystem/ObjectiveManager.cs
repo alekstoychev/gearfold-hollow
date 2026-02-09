@@ -5,18 +5,25 @@ namespace ObjectiveSystem
 {
     public class ObjectiveManager : MonoBehaviour
     {
-        List<string> objectives = new();
-        
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+        private List<string> objectives = new();
+        private int currentObjectiveIndex = 0;
+
+        public string GetCurrentObjective()
         {
+            if (currentObjectiveIndex < objectives.Count)
+            {
+                return objectives[currentObjectiveIndex];
+            }
             
+            return "No objective";
         }
-    
-        // Update is called once per frame
-        void Update()
+
+        public void ProgressObjective()
         {
-            
+            if (currentObjectiveIndex < objectives.Count)
+            {
+                currentObjectiveIndex++;   
+            }
         }
     }
 }

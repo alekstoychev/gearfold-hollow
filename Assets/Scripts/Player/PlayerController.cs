@@ -71,27 +71,20 @@ namespace Player
 
         private void OnInteractPerformed(InputAction.CallbackContext callbackContext)
         {
-            if (isInDialogue)
+            Collider2D[] results = new Collider2D[10];
+            
+            int collisions = collision.Overlap(ContactFilter2D.noFilter, results);
+
+            for (int i = 0; i < collisions; i++)
             {
-                DialogueManager.GetDialogueManager().DeactivateDialogue();
-            }
-            else
-            {
-                Collider2D[] results = new Collider2D[10];
-                
-                int collisions = collision.Overlap(ContactFilter2D.noFilter, results);
-    
-                for (int i = 0; i < collisions; i++)
+                Interactable interactable = results[i].gameObject.GetComponent<Interactable>();
+                if (!interactable)
                 {
-                    Interactable interactable = results[i].gameObject.GetComponent<Interactable>();
-                    if (!interactable)
-                    {
-                        continue;
-                    }
-                    
-                    interactable.Interact();
-                    break;
+                    continue;
                 }
+                
+                interactable.Interact();
+                break;
             }
         }
 
