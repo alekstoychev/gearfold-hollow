@@ -1,11 +1,25 @@
 using System;
 using System.Collections.Generic;
-using Player;
+using Interact;
+using ObjectiveSystem;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace DialogueSystem
 {
+    [Serializable]
+    public class DialogueText
+    {
+        public string text;
+        public float waitTimeAfterText;
+        public bool continueAfterText;
+        
+        public static implicit operator string(DialogueText dialogueText)
+        {
+            return dialogueText.text;
+        }
+    }
+    
     [Serializable]
     public class ObjectiveDialogue
     {
@@ -14,8 +28,18 @@ namespace DialogueSystem
         [SerializeField] private List<string> randomDialogue;
         private int lastDialogueIdx;
 
-        [SerializeField] private List<string> objectiveDialoguesText;
+        [SerializeField] private List<DialogueText> objectiveDialoguesText;
         private int currentIdx;
+
+        public float GetWaitTimeAfterText()
+        {
+            return objectiveDialoguesText[currentIdx].waitTimeAfterText;
+        }
+
+        public bool GetContinueAfterText()
+        {
+            return objectiveDialoguesText[currentIdx].continueAfterText;
+        }
 
         public string GetObjectiveDialogue()
         {
@@ -65,10 +89,19 @@ namespace DialogueSystem
         // Whenever the object is interacted with when involved in an objective
         [SerializeField] private List<ObjectiveDialogue> objectiveDialogues;
 
-        public string currentObjective;
         public bool isInvolved;
         
         private int lastDialogueIdx;
+
+        public float GetWaitTimeAfterText()
+        {
+            return GetCurrentObjective().GetWaitTimeAfterText();
+        }
+
+        public bool GetContinueAfterText()
+        {
+            return GetCurrentObjective().GetContinueAfterText();
+        }
 
         public string GetDialogue()
         {
@@ -106,7 +139,7 @@ namespace DialogueSystem
         {
             foreach (ObjectiveDialogue objectiveDialogue in objectiveDialogues)
             {
-                if (objectiveDialogue.objectiveName == currentObjective)
+                if (objectiveDialogue.objectiveName == ObjectiveManager.GetCurrentObjective())
                 {
                     return objectiveDialogue;
                 }
@@ -133,13 +166,16 @@ namespace DialogueSystem
     {
         public DialogueBox dialogueBox;
         
-        private Dialogue currentDialogue;
         private bool isDialogueActive;
+
+        private void Awake()
+        {
+            Interactable.OnInteract += TriggerDialogue;
+        }
         
         public void TriggerDialogue(Dialogue dialogue) // new
         {
-            currentDialogue = dialogue;
-            if (isDialogueActive && currentDialogue.CanRemoveDialogue())
+            if (isDialogueActive && dialogue.CanRemoveDialogue())
             {
                 DeactivateDialogue();
                 isDialogueActive = false;
@@ -151,22 +187,14 @@ namespace DialogueSystem
             }
         }
 
-        // Debugging test method
         public void ActivateDialogue(Dialogue dialogue) 
         {
             dialogueBox.ShowDialogueBox(dialogue);
-            PlayerController.isInDialogue = true;
         }
 
         public void DeactivateDialogue()
         {
             dialogueBox.HideDialogueBox();
-            PlayerController.isInDialogue = false;
-        }
-        
-        public static DialogueManager GetDialogueManager()
-        {
-            return FindFirstObjectByType<DialogueManager>();
         }
     }
     

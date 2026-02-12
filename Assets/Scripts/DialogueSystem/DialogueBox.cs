@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,10 +21,20 @@ namespace DialogueSystem
         
         private string fullDialogue;
         private bool doTypeWriter;
+
+        private bool canContinueDialogue = true;
+        private Dialogue currentDialogue;
         #endregion
     
         public void ShowDialogueBox(Dialogue dialogueToAdd)
         {
+            if (!canContinueDialogue)
+            {
+                return;
+            }
+            
+            currentDialogue = dialogueToAdd;
+            
             speakerTitleBox.text = dialogueToAdd.speakerName;
             fullDialogue = dialogueToAdd.GetDialogue();
             
@@ -44,9 +55,16 @@ namespace DialogueSystem
             speakerTextBox.enabled = false;
             
             doTypeWriter = false;
+            
+            if (!currentDialogue.CanRemoveDialogue() && currentDialogue.GetContinueAfterText())
+            {
+                canContinueDialogue = false;
+                StartCoroutine(ShowDialogueAfterDelay());
+                Debug.Log("Doing the funny now");
+            }
         }
 
-        void Update()
+        private void Update()
         {
             CheckTypeWriter();
         }
@@ -73,6 +91,14 @@ namespace DialogueSystem
             {
                 currentTypewriterTimer += Time.deltaTime;
             }
+        }
+        
+        private IEnumerator ShowDialogueAfterDelay()
+        {
+            yield return new WaitForSeconds(currentDialogue.GetWaitTimeAfterText());
+            
+            ShowDialogueBox(currentDialogue);
+            canContinueDialogue = true;
         }
     }
 }

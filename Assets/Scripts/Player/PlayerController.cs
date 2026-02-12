@@ -1,5 +1,4 @@
-using System;
-using DialogueSystem;
+using Interact;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,8 +10,6 @@ namespace Player
         [Header("Movement")]
         public float moveSpeed = 10.0f;
         public float horizontalDampening;
-
-        [NonSerialized] public static bool isInDialogue;
         
         private PlayerInput playerInput;
         private Rigidbody2D rb;
@@ -24,7 +21,7 @@ namespace Player
         #endregion
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+        private void Start()
         {
             rb = gameObject.GetComponent<Rigidbody2D>();
             if (!rb)
@@ -59,12 +56,12 @@ namespace Player
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             Move();
         }
 
-        void FixedUpdate()
+        private void FixedUpdate()
         {
             CheckSpriteRotation();
         }

@@ -1,18 +1,47 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace ObjectiveSystem
 {
+    [Serializable] public struct Objective
+    {
+        public string name;
+        public List<string> peopleInvolved;
+
+        public static implicit operator string(Objective objective)
+        {
+            return objective.name;
+        }
+
+        public bool IsPersonInvolved(string nameToFind)
+        {
+            return peopleInvolved.Contains(nameToFind);
+        }
+    }
+    
     public class ObjectiveManager : MonoBehaviour
     {
-        private List<string> objectives = new();
+        [SerializeField] private List<Objective> objectives = new();
         private int currentObjectiveIndex = 0;
 
-        public string GetCurrentObjective()
+        private void Awake()
         {
-            if (currentObjectiveIndex < objectives.Count)
+            UpdatePeopleInvolved();
+        }
+
+        public void DebugGetCurrentObjective(TMPro.TextMeshProUGUI objectiveText)
+        {
+            objectiveText.text = GetCurrentObjective();
+        }
+        
+        public static string GetCurrentObjective()
+        {
+            ObjectiveManager objectiveManager = FindFirstObjectByType<ObjectiveManager>();
+            
+            if (objectiveManager.currentObjectiveIndex < objectiveManager.objectives.Count)
             {
-                return objectives[currentObjectiveIndex];
+                return objectiveManager.objectives[objectiveManager.currentObjectiveIndex];
             }
             
             return "No objective";
@@ -20,9 +49,24 @@ namespace ObjectiveSystem
 
         public void ProgressObjective()
         {
-            if (currentObjectiveIndex < objectives.Count)
+            currentObjectiveIndex++;
+            UpdatePeopleInvolved();
+        }
+
+        private void UpdatePeopleInvolved()
+        {
+            if (currentObjectiveIndex >= objectives.Count || currentObjectiveIndex < 0)
             {
-                currentObjectiveIndex++;   
+                return;
+            }
+            
+            Objective currentObjective = objectives[currentObjectiveIndex];
+
+            Interact.Interactable[] foundInteractables = FindObjectsByType<Interact.Interactable>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            for (int i = 0; i < foundInteractables.Length; i++)
+            {
+                foundInteractables[i].dialogue.isInvolved = 
+                    currentObjective.IsPersonInvolved(foundInteractables[i].dialogue.speakerName);
             }
         }
     }
