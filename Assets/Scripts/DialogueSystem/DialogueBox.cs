@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -24,6 +25,8 @@ namespace DialogueSystem
 
         private bool canContinueDialogue = true;
         private Dialogue currentDialogue;
+
+        public event Action<bool> OnContinueDialogue;
         #endregion
     
         public void ShowDialogueBox(Dialogue dialogueToAdd)
@@ -55,12 +58,19 @@ namespace DialogueSystem
             speakerTextBox.enabled = false;
             
             doTypeWriter = false;
+
+            if (currentDialogue.GetCompleteObjectiveAfterText())
+            {
+                currentDialogue.CompleteObjectiveDialogue();
+                return;
+            }
             
-            if (!currentDialogue.CanRemoveDialogue() && currentDialogue.GetContinueAfterText())
+            Debug.Log($"Checking continue after dialogue {currentDialogue.GetContinueAfterText()}, {currentDialogue.GetWaitTimeAfterText()}");
+            if (currentDialogue.GetContinueAfterText())
             {
                 canContinueDialogue = false;
                 StartCoroutine(ShowDialogueAfterDelay());
-                Debug.Log("Doing the funny now");
+                Debug.Log($"Activating Coroutine.");
             }
         }
 
@@ -97,8 +107,9 @@ namespace DialogueSystem
         {
             yield return new WaitForSeconds(currentDialogue.GetWaitTimeAfterText());
             
-            ShowDialogueBox(currentDialogue);
             canContinueDialogue = true;
+            ShowDialogueBox(currentDialogue);
+            OnContinueDialogue?.Invoke(true);
         }
     }
 }

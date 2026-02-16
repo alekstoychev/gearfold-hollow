@@ -13,6 +13,7 @@ namespace DialogueSystem
         public string text;
         public float waitTimeAfterText;
         public bool continueAfterText;
+        public bool completeObjectiveAfterText;
         
         public static implicit operator string(DialogueText dialogueText)
         {
@@ -33,15 +34,25 @@ namespace DialogueSystem
 
         public float GetWaitTimeAfterText()
         {
-            return objectiveDialoguesText[currentIdx].waitTimeAfterText;
+            return objectiveDialoguesText[currentIdx-1].waitTimeAfterText;
+        }
+        
+        public bool GetCompleteObjectiveAfterText()
+        {
+            return objectiveDialoguesText[currentIdx-1].completeObjectiveAfterText;
         }
 
         public bool GetContinueAfterText()
         {
-            return objectiveDialoguesText[currentIdx].continueAfterText;
+            if (currentIdx < objectiveDialoguesText.Count)
+            {
+                return objectiveDialoguesText[currentIdx-1].continueAfterText;
+            }
+            
+            return false;
         }
 
-        public string GetObjectiveDialogue()
+        public string GetNewObjectiveDialogue()
         {
             if (currentIdx < objectiveDialoguesText.Count)
             {
@@ -90,17 +101,44 @@ namespace DialogueSystem
         [SerializeField] private List<ObjectiveDialogue> objectiveDialogues;
 
         public bool isInvolved;
+
+        public event Action OnObjectiveDialogueComplete;
         
         private int lastDialogueIdx;
 
+        public void CompleteObjectiveDialogue()
+        {
+            OnObjectiveDialogueComplete?.Invoke();
+        }
+
         public float GetWaitTimeAfterText()
         {
-            return GetCurrentObjective().GetWaitTimeAfterText();
+            if (GetCurrentObjective() != null)
+            {
+                return GetCurrentObjective().GetWaitTimeAfterText();
+            }
+
+            return 0f;
         }
 
         public bool GetContinueAfterText()
         {
-            return GetCurrentObjective().GetContinueAfterText();
+            if (GetCurrentObjective() != null)
+            {
+                return GetCurrentObjective().GetContinueAfterText();
+            }
+            
+            return false;
+        }
+        
+        public bool GetCompleteObjectiveAfterText()
+        {
+            if (GetCurrentObjective() != null)
+            {
+                return GetCurrentObjective().GetCompleteObjectiveAfterText();
+            }
+            
+            return false;
         }
 
         public string GetDialogue()
@@ -109,7 +147,7 @@ namespace DialogueSystem
             {
                 if (GetCurrentObjective()  != null)
                 {
-                    return GetCurrentObjective().GetObjectiveDialogue();
+                    return GetCurrentObjective().GetNewObjectiveDialogue();
                 }
             }
             
@@ -171,11 +209,17 @@ namespace DialogueSystem
         private void Awake()
         {
             Interactable.OnInteract += TriggerDialogue;
+            dialogueBox.OnContinueDialogue += OnContinueDialogueTriggered;
+        }
+
+        private void OnContinueDialogueTriggered(bool canContinue)
+        {
+            isDialogueActive = canContinue;
         }
         
         public void TriggerDialogue(Dialogue dialogue) // new
         {
-            if (isDialogueActive && dialogue.CanRemoveDialogue())
+            if (isDialogueActive)
             {
                 DeactivateDialogue();
                 isDialogueActive = false;

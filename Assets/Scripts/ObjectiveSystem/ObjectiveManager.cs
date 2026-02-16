@@ -47,10 +47,11 @@ namespace ObjectiveSystem
             return "No objective";
         }
 
-        public void ProgressObjective()
+        public static void ProgressObjective()
         {
-            currentObjectiveIndex++;
-            UpdatePeopleInvolved();
+            ObjectiveManager objectiveManager = FindFirstObjectByType<ObjectiveManager>();
+            objectiveManager.currentObjectiveIndex++;
+            objectiveManager.UpdatePeopleInvolved();
         }
 
         private void UpdatePeopleInvolved()
@@ -62,11 +63,11 @@ namespace ObjectiveSystem
             
             Objective currentObjective = objectives[currentObjectiveIndex];
 
-            Interact.Interactable[] foundInteractables = FindObjectsByType<Interact.Interactable>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
-            for (int i = 0; i < foundInteractables.Length; i++)
+            ObjectiveListener[] foundListeners = FindObjectsByType<ObjectiveListener>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            for (int i = 0; i < foundListeners.Length; i++)
             {
-                foundInteractables[i].dialogue.isInvolved = 
-                    currentObjective.IsPersonInvolved(foundInteractables[i].dialogue.speakerName);
+                foundListeners[i].InformAboutInvolvement(
+                    currentObjective.IsPersonInvolved(foundListeners[i].AttachedNPC));
             }
         }
     }
