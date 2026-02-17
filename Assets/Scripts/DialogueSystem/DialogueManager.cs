@@ -30,23 +30,23 @@ namespace DialogueSystem
         private int lastDialogueIdx;
 
         [SerializeField] private List<DialogueText> objectiveDialoguesText;
-        private int currentIdx;
+        [SerializeField] private int currentIdx = -1; // blep :P
 
         public float GetWaitTimeAfterText()
         {
-            return objectiveDialoguesText[currentIdx-1].waitTimeAfterText;
+            return objectiveDialoguesText[currentIdx].waitTimeAfterText;
         }
         
         public bool GetCompleteObjectiveAfterText()
         {
-            return objectiveDialoguesText[currentIdx-1].completeObjectiveAfterText;
+            return objectiveDialoguesText[currentIdx].completeObjectiveAfterText;
         }
 
         public bool GetContinueAfterText()
         {
-            if (currentIdx < objectiveDialoguesText.Count)
+            if (currentIdx >= 0 && currentIdx < objectiveDialoguesText.Count)
             {
-                return objectiveDialoguesText[currentIdx-1].continueAfterText;
+                return objectiveDialoguesText[currentIdx].continueAfterText;
             }
             
             return false;
@@ -56,9 +56,10 @@ namespace DialogueSystem
         {
             if (currentIdx < objectiveDialoguesText.Count)
             {
-                return objectiveDialoguesText[currentIdx++];
+                return objectiveDialoguesText[++currentIdx];
             }
             
+            Debug.LogError($"No objective dialogue available at {currentIdx}");
             return GetRandomDialogue();
         }
         

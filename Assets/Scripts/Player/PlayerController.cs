@@ -10,6 +10,10 @@ namespace Player
         [Header("Movement")]
         public float moveSpeed = 10.0f;
         public float horizontalDampening;
+
+        [Header("Sprites")] 
+        public Sprite walkingRightSprite;
+        public Sprite walkingLeftSprite;
         
         private PlayerInput playerInput;
         private Rigidbody2D rb;
@@ -89,17 +93,11 @@ namespace Player
         {
             if (rb.linearVelocityX > 0.1)
             {
-                if (!spriteRenderer.flipX)
-                {
-                    spriteRenderer.flipX = true;
-                } 
+                spriteRenderer.sprite = walkingRightSprite;
             }
             else if (rb.linearVelocityX < -0.1)
             {
-                if (spriteRenderer.flipX)
-                {
-                    spriteRenderer.flipX = false;
-                } 
+                spriteRenderer.sprite = walkingLeftSprite;
             }
         }
 
@@ -113,7 +111,7 @@ namespace Player
             {
                 if (rb.linearVelocity.x != 0)
                 {
-                    rb.linearVelocityX *= horizontalDampening;
+                    rb.linearVelocityX *= horizontalDampening *  Time.deltaTime;
                 }
             }
         }

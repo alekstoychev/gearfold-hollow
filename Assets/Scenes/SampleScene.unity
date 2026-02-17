@@ -218,6 +218,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930555530}
     m_Modifications:
+    - target: {fileID: 50222818348411750, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: dialogue.isInvolved
       value: 1
@@ -240,11 +244,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveName
-      value: Tutorial 1
+      value: Tutorial 2
       objectReference: {fileID: 0}
     - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveName
@@ -326,9 +330,53 @@ PrefabInstance:
       propertyPath: 'dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[2]'
       value: Let's go shopping!!! :D
       objectReference: {fileID: 0}
+    - target: {fileID: 7452996239584053558, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.24000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452996239584053558, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.24000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452996239584053558, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.24000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452996239584053558, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8238093418266851244, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: m_Name
       value: Bob the Tutorial Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Size.x
+      value: 7.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Size.y
+      value: 7.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0aa9196d6440a4cf1b2c10b2c6fafd08, type: 3}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -396,7 +444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &122783954
 Transform:
   m_ObjectHideFlags: 0
@@ -925,7 +973,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &672412345
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -1546,6 +1594,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930555530}
     m_Modifications:
+    - target: {fileID: 50222818348411750, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: dialogue.speakerName
       value: Ferryman
@@ -1565,6 +1617,14 @@ PrefabInstance:
     - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].currentIdx
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].currentIdx
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveName
@@ -1733,6 +1793,34 @@ PrefabInstance:
     - target: {fileID: 8238093418266851244, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: m_Name
       value: Ferryman NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Size.x
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Size.y
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6f02bca3363294099bfbc3574708db9e, type: 3}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3317,7 +3405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1795065379
 Transform:
   m_ObjectHideFlags: 0
@@ -3670,6 +3758,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930555530}
     m_Modifications:
+    - target: {fileID: 50222818348411750, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: textPopup
       value: 
@@ -3696,7 +3788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveName
@@ -3726,9 +3818,53 @@ PrefabInstance:
       propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7452996239584053558, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452996239584053558, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452996239584053558, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452996239584053558, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8238093418266851244, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: m_Name
       value: Billy the Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Size.x
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Size.y
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c2b511de807fa4345a60a9edbcdedb8f, type: 3}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3819,7 +3955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 899790942758383625, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1400003
+      value: 2.3000002
       objectReference: {fileID: 0}
     - target: {fileID: 899790942758383625, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3831,19 +3967,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1536001947713493543, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1400003
+      value: 2.3000002
       objectReference: {fileID: 0}
     - target: {fileID: 1765850986268576963, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
       propertyPath: orthographic size
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2345710396244594668, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
+      propertyPath: m_Size.x
+      value: 1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345710396244594668, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345710396244594668, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 953ef71d869aa4cc29c15df6ed7cb119, type: 3}
     - target: {fileID: 2345710396244594668, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2345710396244594668, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036669365352771465, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
+      propertyPath: walkingLeftSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 953ef71d869aa4cc29c15df6ed7cb119, type: 3}
+    - target: {fileID: 6036669365352771465, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
+      propertyPath: walkingRightSprite
+      value: 
+      objectReference: {fileID: -5710639068552120381, guid: 59e4ab9f5c9da49319c5a8e1956a45af, type: 3}
     - target: {fileID: 6036669365352771465, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
       propertyPath: horizontalDampening
       value: 0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346452672518550648, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346452672518550648, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.34
       objectReference: {fileID: 0}
     - target: {fileID: 6876699175580397701, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
       propertyPath: m_Constraints
@@ -3851,7 +4019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7414223128778531445, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
       propertyPath: Lens.OrthographicSize
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7769527380581600400, guid: 3947e88f77bb245a5bde305e4cf2859b, type: 3}
       propertyPath: m_LocalPosition.x

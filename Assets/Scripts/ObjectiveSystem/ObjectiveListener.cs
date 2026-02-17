@@ -12,7 +12,12 @@ namespace ObjectiveSystem
             get => attachedNPC;
         }
 
-        private void Awake()
+        private void Start()
+        {
+            UpdateOwnerName();
+        }
+
+        public void UpdateOwnerName()
         {
             Interactable interactable = gameObject.GetComponent<Interactable>();
             if (interactable == null)
@@ -32,6 +37,7 @@ namespace ObjectiveSystem
         public void InformAboutInvolvement(bool isInvolved)
         {
             gameObject.GetComponent<Interactable>().dialogue.isInvolved = isInvolved;
+            Debug.Log($"{gameObject.name}: is involved: {isInvolved}");
         }
     }
 }

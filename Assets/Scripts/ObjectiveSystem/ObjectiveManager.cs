@@ -16,6 +16,7 @@ namespace ObjectiveSystem
 
         public bool IsPersonInvolved(string nameToFind)
         {
+            Debug.Log($"Is {nameToFind} involved: {peopleInvolved.Contains(nameToFind)}");
             return peopleInvolved.Contains(nameToFind);
         }
     }
@@ -38,6 +39,10 @@ namespace ObjectiveSystem
         public static string GetCurrentObjective()
         {
             ObjectiveManager objectiveManager = FindFirstObjectByType<ObjectiveManager>();
+            if (!objectiveManager)
+            {
+                return "No objective";
+            }
             
             if (objectiveManager.currentObjectiveIndex < objectiveManager.objectives.Count)
             {
@@ -66,6 +71,9 @@ namespace ObjectiveSystem
             ObjectiveListener[] foundListeners = FindObjectsByType<ObjectiveListener>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
             for (int i = 0; i < foundListeners.Length; i++)
             {
+                foundListeners[i].UpdateOwnerName(); // Update in case it hasnt found it yet
+                
+                Debug.Log($"Looking at NPC {foundListeners[i].AttachedNPC}");
                 foundListeners[i].InformAboutInvolvement(
                     currentObjective.IsPersonInvolved(foundListeners[i].AttachedNPC));
             }
