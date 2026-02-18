@@ -14,6 +14,7 @@ namespace DialogueSystem
         public Image dialogueBoxBackground2;
         public TextMeshProUGUI speakerTitleBox;
         public TextMeshProUGUI speakerTextBox;
+        public Image speakerImage;
 
         [Header("Typewriter settings")] 
         public float typewriterDelay;
@@ -47,6 +48,12 @@ namespace DialogueSystem
             speakerTextBox.enabled = true;
             speakerTextBox.text = "";
             
+            speakerImage.sprite = dialogueToAdd.GetExpressionSprite();
+            if (speakerImage.sprite)
+            {
+                speakerImage.enabled = true;
+            }
+            
             doTypeWriter = true;
         }
 
@@ -56,6 +63,8 @@ namespace DialogueSystem
             dialogueBoxBackground2.enabled = false;
             speakerTitleBox.enabled = false;
             speakerTextBox.enabled = false;
+            speakerImage.enabled = false;
+            speakerImage.sprite = null;
             
             doTypeWriter = false;
 

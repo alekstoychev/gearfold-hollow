@@ -5,6 +5,13 @@ using ObjectiveSystem;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+public enum Expression
+{
+    Expression1,
+    Expression2,
+    NoExpression
+}
+
 namespace DialogueSystem
 {
     [Serializable]
@@ -14,6 +21,7 @@ namespace DialogueSystem
         public float waitTimeAfterText;
         public bool continueAfterText;
         public bool completeObjectiveAfterText;
+        public Expression expression = Expression.Expression1;
         
         public static implicit operator string(DialogueText dialogueText)
         {
@@ -40,6 +48,11 @@ namespace DialogueSystem
         public bool GetCompleteObjectiveAfterText()
         {
             return objectiveDialoguesText[currentIdx].completeObjectiveAfterText;
+        }
+
+        public Expression GetExpression()
+        {
+            return objectiveDialoguesText[currentIdx].expression;
         }
 
         public bool GetContinueAfterText()
@@ -110,6 +123,26 @@ namespace DialogueSystem
         public void CompleteObjectiveDialogue()
         {
             OnObjectiveDialogueComplete?.Invoke();
+        }
+
+        public Sprite GetExpressionSprite()
+        {
+            Expression expression = Expression.Expression1;
+            
+            if (GetCurrentObjective() != null)
+            {
+                expression = GetCurrentObjective().GetExpression();
+            }
+            
+            switch (expression)
+            {
+                case Expression.Expression1:
+                    return expression1;
+                case Expression.Expression2:
+                    return expression2;
+                default:
+                    return null;
+            }
         }
 
         public float GetWaitTimeAfterText()
