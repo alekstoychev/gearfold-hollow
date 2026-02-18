@@ -38,7 +38,7 @@ namespace DialogueSystem
         private int lastDialogueIdx;
 
         [SerializeField] private List<DialogueText> objectiveDialoguesText;
-        [SerializeField] private int currentIdx = -1; // blep :P
+        private int currentIdx = -1;
 
         public float GetWaitTimeAfterText()
         {
