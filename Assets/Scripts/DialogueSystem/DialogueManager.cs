@@ -15,17 +15,23 @@ public enum Expression
 namespace DialogueSystem
 {
     [Serializable]
-    public class DialogueText
+    public struct DialogueText
     {
         public string text;
-        public float waitTimeAfterText;
-        public bool continueAfterText;
+        public Expression expression;
+    }
+    
+    [Serializable]
+    public struct ObjectiveDialogueText
+    {
+        public DialogueText dialogueText;
+        public float autoContinueDelay;
+        public bool autoContinue;
         public bool completeObjectiveAfterText;
-        public Expression expression = Expression.Expression1;
         
-        public static implicit operator string(DialogueText dialogueText)
+        public static implicit operator string(ObjectiveDialogueText objectiveDialogueText)
         {
-            return dialogueText.text;
+            return objectiveDialogueText.dialogueText.text;
         }
     }
     
@@ -37,12 +43,12 @@ namespace DialogueSystem
         [SerializeField] private List<string> randomDialogue;
         private int lastDialogueIdx;
 
-        [SerializeField] private List<DialogueText> objectiveDialoguesText;
+        [SerializeField] private List<ObjectiveDialogueText> objectiveDialoguesText;
         private int currentIdx = -1;
 
         public float GetWaitTimeAfterText()
         {
-            return objectiveDialoguesText[currentIdx].waitTimeAfterText;
+            return objectiveDialoguesText[currentIdx].autoContinueDelay;
         }
         
         public bool GetCompleteObjectiveAfterText()
@@ -52,14 +58,14 @@ namespace DialogueSystem
 
         public Expression GetExpression()
         {
-            return objectiveDialoguesText[currentIdx].expression;
+            return objectiveDialoguesText[currentIdx].dialogueText.expression;
         }
 
         public bool GetContinueAfterText()
         {
             if (currentIdx >= 0 && currentIdx < objectiveDialoguesText.Count)
             {
-                return objectiveDialoguesText[currentIdx].continueAfterText;
+                return objectiveDialoguesText[currentIdx].autoContinue;
             }
             
             return false;
@@ -104,14 +110,19 @@ namespace DialogueSystem
     [Serializable] 
     public class Dialogue
     {
+        #region Variables
+        [Header("Character Name")]
         public string speakerName;
     
+        [Header("Expression images")]
         public Sprite expression1;
         public Sprite expression2;
-
-        // Whenever the object is interacted with when NOT involved in an objective
-        [SerializeField] private List<string> randomDialogue; 
-        // Whenever the object is interacted with when involved in an objective
+        
+        [Header("Dialogues")]
+        
+        [Tooltip("Whenever the object is interacted with when NOT involved in an objective")]
+        [SerializeField] private List<DialogueText> randomDialogue; 
+        [Tooltip("Whenever the object is interacted with when involved in an objective")]
         [SerializeField] private List<ObjectiveDialogue> objectiveDialogues;
 
         public bool isInvolved;
@@ -119,6 +130,7 @@ namespace DialogueSystem
         public event Action OnObjectiveDialogueComplete;
         
         private int lastDialogueIdx;
+        #endregion
 
         public void CompleteObjectiveDialogue()
         {
@@ -127,7 +139,7 @@ namespace DialogueSystem
 
         public Sprite GetExpressionSprite()
         {
-            Expression expression = Expression.Expression1;
+            Expression expression = randomDialogue[lastDialogueIdx].expression;
             
             if (GetCurrentObjective() != null)
             {
@@ -204,7 +216,7 @@ namespace DialogueSystem
             }
             
             lastDialogueIdx = randomIndex;
-            return randomDialogue[randomIndex];
+            return randomDialogue[randomIndex].text;
         }
 
         private ObjectiveDialogue GetCurrentObjective()
