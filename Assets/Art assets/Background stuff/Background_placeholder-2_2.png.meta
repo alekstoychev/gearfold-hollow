@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: 671783210adea6944896592dcfa106e0
+guid: 6e36e2bc8e4a3cd48bb4f14906a7825d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1339395958768851389
-    second: sprite_idle_0
+      213: 2241909080183995546
+    second: Background_placeholder-2_2_0
   - first:
-      213: -917403848773502299
-    second: sprite_idle_1
+      213: -4140096641749791579
+    second: Background_placeholder-2_2_1
   - first:
-      213: -4039985058986040272
-    second: sprite_idle_2
+      213: 6581045965950188834
+    second: Background_placeholder-2_2_2
   - first:
-      213: -2249540182638671104
-    second: sprite_idle_3
+      213: 2037269606034515913
+    second: Background_placeholder-2_2_3
   - first:
-      213: 8467003889679302299
-    second: sprite_idle_4
+      213: -6474899390190104784
+    second: Background_placeholder-2_2_4
+  - first:
+      213: 3065474554714411069
+    second: Background_placeholder-2_2_5
+  - first:
+      213: 646817470858536814
+    second: Background_placeholder-2_2_6
+  - first:
+      213: 3556675056389451095
+    second: Background_placeholder-2_2_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,9 +70,9 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.4, y: 0.15}
-  spritePixelsToUnits: 440
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,111 +121,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite_idle_0
+      name: Background_placeholder-2_2_0
       rect:
         serializedVersion: 2
-        x: 293
-        y: 123
-        width: 498
-        height: 945
+        x: 585
+        y: 155
+        width: 3511
+        height: 1333
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db9d200378d769210800000000000000
-      internalID: 1339395958768851389
+      spriteID: a9cf6172e6cdc1f10800000000000000
+      internalID: 2241909080183995546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_idle_1
+      name: Background_placeholder-2_2_1
       rect:
         serializedVersion: 2
-        x: 787
-        y: 719
-        width: 16
-        height: 47
+        x: 2216
+        y: 1288
+        width: 275
+        height: 204
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5aa77466f0ab443f0800000000000000
-      internalID: -917403848773502299
+      spriteID: 5ac47bc1a0c6b86c0800000000000000
+      internalID: -4140096641749791579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_idle_2
+      name: Background_placeholder-2_2_2
       rect:
         serializedVersion: 2
-        x: 817
-        y: 719
-        width: 22
-        height: 47
+        x: 2861
+        y: 1345
+        width: 215
+        height: 183
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 034604d5ef61fe7c0800000000000000
-      internalID: -4039985058986040272
+      spriteID: 22d7afa2072945b50800000000000000
+      internalID: 6581045965950188834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_idle_3
+      name: Background_placeholder-2_2_3
       rect:
         serializedVersion: 2
-        x: 842
-        y: 719
-        width: 25
-        height: 47
+        x: 3085
+        y: 1318
+        width: 188
+        height: 176
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00bcad95f1708c0e0800000000000000
-      internalID: -2249540182638671104
+      spriteID: 9c7236ba9e5d54c10800000000000000
+      internalID: 2037269606034515913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_idle_4
+      name: Background_placeholder-2_2_4
       rect:
         serializedVersion: 2
-        x: 869
-        y: 719
-        width: 33
-        height: 46
+        x: 1610
+        y: 154
+        width: 99
+        height: 56
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9e7f247d27d08570800000000000000
-      internalID: 8467003889679302299
+      spriteID: 03f43536f498426a0800000000000000
+      internalID: -6474899390190104784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_placeholder-2_2_5
+      rect:
+        serializedVersion: 2
+        x: 2419
+        y: 102
+        width: 99
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3050cdadd0ca8a20800000000000000
+      internalID: 3065474554714411069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_placeholder-2_2_6
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 116
+        width: 249
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e672a011015f9f800800000000000000
+      internalID: 646817470858536814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_placeholder-2_2_7
+      rect:
+        serializedVersion: 2
+        x: 3575
+        y: 60
+        width: 235
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75de595ae19db5130800000000000000
+      internalID: 3556675056389451095
       vertices: []
       indices: 
       edges: []
@@ -226,7 +301,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -235,11 +310,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprite_idle_0: 1339395958768851389
-      sprite_idle_1: -917403848773502299
-      sprite_idle_2: -4039985058986040272
-      sprite_idle_3: -2249540182638671104
-      sprite_idle_4: 8467003889679302299
+      Background_placeholder-2_2_0: 2241909080183995546
+      Background_placeholder-2_2_1: -4140096641749791579
+      Background_placeholder-2_2_2: 6581045965950188834
+      Background_placeholder-2_2_3: 2037269606034515913
+      Background_placeholder-2_2_4: -6474899390190104784
+      Background_placeholder-2_2_5: 3065474554714411069
+      Background_placeholder-2_2_6: 646817470858536814
+      Background_placeholder-2_2_7: 3556675056389451095
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
