@@ -1,0 +1,581 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7048162943654411181
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 50222818348411750, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.expression1
+      value: 
+      objectReference: {fileID: 21300000, guid: 5af182e9c0125479585a52a97ab96eb9, type: 3}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.expression2
+      value: 
+      objectReference: {fileID: 21300000, guid: 32df222853c5443fea48b75f711e4ea1, type: 3}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.speakerName
+      value: Ferryman
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.randomDialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.randomDialogue.Array.data[0]'
+      value: Waiting for customers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.randomDialogue.Array.data[1]'
+      value: I won't go.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.randomDialogue.Array.data[2]'
+      value: I won't go.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.randomDialogue.Array.data[3]'
+      value: I won't go.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.randomDialogue.Array.data[0].text
+      value: I won't go.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.randomDialogue.Array.data[1].text
+      value: Waiting for customers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].currentIdx
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].currentIdx
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveName
+      value: Intro Boat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveName
+      value: Ferryman Port
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].randomDialogue.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[0]'
+      value: "It\u2019s a nice night. The sky\u2019s clear, though the fog is starting
+        to settle down here."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1]'
+      value: 'What brings you to (town name) anyway? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[2]'
+      value: Not the talkative type, huh?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3]'
+      value: "The whole town\u2019s pretty lively right now. Are you here for the
+        carnival? Well, I hope you enjoy your time if that\u2019s the case. Though
+        I must give fair warning: I\u2019ve heard about things happening here through
+        word of mouth, so be careful out there. Stay where there\u2019s people, in
+        the light.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[4]'
+      value: "The whole town\u2019s pretty lively right now. Are you here for the
+        carnival? Well, I hope you enjoy your time if that\u2019s the case. Though
+        I must give fair warning: I\u2019ve heard about things happening here through
+        word of mouth, so be careful out there. Stay where there\u2019s people, in
+        the light.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[5]'
+      value: "The whole town\u2019s pretty lively right now. Are you here for the
+        carnival? Well, I hope you enjoy your time if that\u2019s the case. Though
+        I must give fair warning: I\u2019ve heard about things happening here through
+        word of mouth, so be careful out there. Stay where there\u2019s people, in
+        the light.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[0].text
+      value: "It\u2019s a nice night. The sky\u2019s clear, though the fog is starting
+        to settle down here."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1].text
+      value: What brings you to Gearford Hollow anyway?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[2].text
+      value: 'Not the talkative type, huh? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].text
+      value: "The whole town\u2019s pretty lively right now. Are you here for the
+        carnival? Well, I hope you enjoy your time if that\u2019s the case. Though
+        I must give fair warning: I\u2019ve heard about things happening here through
+        word of mouth, so be careful out there. Stay where there\u2019s people, in
+        the light.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[0].text
+      value: 'Well, that was the ride. Here we are. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[1].text
+      value: "Right. I don\u2019t know if you\u2019ve heard, but the townsfolk really
+        enjoys their card games.  have a spare deck with me. Just take them, they
+        might come in handy. And just remember: Stay out of the fog. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[2].text
+      value: 'Not the talkative type, huh? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[3].text
+      value: "The whole town\u2019s pretty lively right now. Are you here for the
+        carnival? Well, I hope you enjoy your time if that\u2019s the case. Though
+        I must give fair warning: I\u2019ve heard about things happening here through
+        word of mouth, so be careful out there. Stay where there\u2019s people, in
+        the light.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1].expression
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[2].expression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[0].expression
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[0].autoContinue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1].autoContinue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[2].autoContinue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[0].autoContinueDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[0].continueAfterText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[0].dialogueText.text
+      value: "It\u2019s a nice night. The sky\u2019s clear, though the fog is starting
+        to settle down here."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[0].waitTimeAfterText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1].autoContinueDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1].continueAfterText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1].dialogueText.text
+      value: What brings you to Gearfold Hollow anyway
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1].waitTimeAfterText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[2].autoContinueDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[2].continueAfterText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[2].dialogueText.text
+      value: Not the talkative type, huh?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[2].waitTimeAfterText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].continueAfterText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].dialogueText.text
+      value: "he whole town\u2019s pretty lively right now. Are you here for the
+        carnival? Well, I hope you enjoy your time if that\u2019s the case. Though
+        I must give fair warning: I\u2019ve heard about things happening here through
+        word of mouth, so be careful out there. Stay where there\u2019s people, in
+        the light. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].waitTimeAfterText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[0].continueAfterText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[0].dialogueText.text
+      value: 'Well, that was the ride. Here we are. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[0].waitTimeAfterText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[1].continueAfterText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[1].dialogueText.text
+      value: "Right. I don\u2019t know if you\u2019ve heard, but the townsfolk really
+        enjoys their card games. I have a deck, but I won\u2019t be going into the
+        mainland. You\u2019ll need them more than me. /// I have a spare deck with
+        me. Just take them, they might come in handy. And just remember: Stay out
+        of the fog. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[1].waitTimeAfterText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[2].continueAfterText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[2].waitTimeAfterText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[2].dialogueText.expression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].dialogueText.expression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[1].dialogueText.expression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].completeObjectiveAfterText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[1].completeObjectiveAfterText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ProgressObjective
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: ObjectiveSystem.ObjectiveManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238093418266851244, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Name
+      value: Ferryman NPC Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Size.x
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Size.y
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6f02bca3363294099bfbc3574708db9e, type: 3}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8238093418266851244, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6273724310937161635}
+    - targetCorrespondingSourceObject: {fileID: 8238093418266851244, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 41798296747351933}
+    - targetCorrespondingSourceObject: {fileID: 8238093418266851244, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 535341582752867404}
+  m_SourcePrefab: {fileID: 100100000, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+--- !u!1 &1406122040281320449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8238093418266851244, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+  m_PrefabInstance: {fileID: 7048162943654411181}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6273724310937161635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406122040281320449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalReceiver
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 69ba28d5be82143eaaf7a51636be4a59, type: 2}
+    - {fileID: 11400000, guid: 807e39912f94e443881238d13845cab5, type: 2}
+    - {fileID: 11400000, guid: b30ae0e21728749daadbb6797c3cf4d5, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4651322590022927457}
+          m_TargetAssemblyTypeName: Interact.Interactable, Assembly-CSharp
+          m_MethodName: Interact
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: DialogueSystem.DialogueManager, Assembly-CSharp
+          m_MethodName: DeactivateDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6549594652738858438}
+          m_TargetAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
+          m_MethodName: set_edgeRadius
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 10
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &41798296747351933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406122040281320449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7335c936e73e4ffc823828b1c98c0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveSystem.ObjectiveListener
+  attachedNPC: 
+--- !u!95 &535341582752867404
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406122040281320449}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4651322590022927457 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+  m_PrefabInstance: {fileID: 7048162943654411181}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406122040281320449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7172a07295b4af6888ac6ca8e74d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+--- !u!61 &6549594652738858438 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4266262861679662699, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+  m_PrefabInstance: {fileID: 7048162943654411181}
+  m_PrefabAsset: {fileID: 0}

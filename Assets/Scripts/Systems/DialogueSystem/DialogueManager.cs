@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Interact;
 using ObjectiveSystem;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public enum Expression
@@ -29,6 +30,8 @@ namespace DialogueSystem
         public bool autoContinue;
         public bool completeObjectiveAfterText;
         
+        public UnityEvent onDialogueContinue;
+        
         public static implicit operator string(ObjectiveDialogueText objectiveDialogueText)
         {
             return objectiveDialogueText.dialogueText.text;
@@ -50,7 +53,12 @@ namespace DialogueSystem
         {
             return objectiveDialoguesText[currentIdx].autoContinueDelay;
         }
-        
+
+        public void TriggerEndOfDialogue()
+        {
+            objectiveDialoguesText[currentIdx].onDialogueContinue?.Invoke();
+        }
+
         public bool GetCompleteObjectiveAfterText()
         {
             return objectiveDialoguesText[currentIdx].completeObjectiveAfterText;
@@ -127,14 +135,19 @@ namespace DialogueSystem
 
         public bool isInvolved;
 
-        public event Action OnObjectiveDialogueComplete;
+        //public event Action OnObjectiveDialogueComplete;
         
         private int lastDialogueIdx;
         #endregion
 
-        public void CompleteObjectiveDialogue()
+        /*public void CompleteObjectiveDialogue()
         {
             OnObjectiveDialogueComplete?.Invoke();
+        }*/
+
+        public void TriggerEndOfDialogue()
+        {
+            GetCurrentObjective().TriggerEndOfDialogue();
         }
 
         public Sprite GetExpressionSprite()

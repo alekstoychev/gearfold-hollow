@@ -15,9 +15,6 @@ namespace ObjectiveSystem
         private void Start()
         {
             UpdateOwnerName();
-            
-            Interactable interactable = gameObject.GetComponent<Interactable>();
-            interactable.dialogue.OnObjectiveDialogueComplete += OnObjectiveComplete;
         }
 
         public void UpdateOwnerName()
@@ -29,11 +26,6 @@ namespace ObjectiveSystem
             }
 
             attachedNPC = interactable.dialogue.speakerName;
-        }
-
-        private void OnObjectiveComplete()
-        {
-            ObjectiveManager.ProgressObjective();
         }
 
         public void InformAboutInvolvement(bool isInvolved)
