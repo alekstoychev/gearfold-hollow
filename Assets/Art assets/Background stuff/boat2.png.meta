@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a897ab7a2e3743041acdbaffe415f825
+guid: c2065eaf1af46964ab77d51a32b40306
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6186987725980243130
-    second: sprite_lantern_0001_0
+      213: 4333121670085401395
+    second: boat2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,9 +49,9 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.55, y: 0.25}
-  spritePixelsToUnits: 280
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite_lantern_0001_0
+      name: boat2_0
       rect:
         serializedVersion: 2
-        x: 306
-        y: 98
-        width: 591
-        height: 968
+        x: 481
+        y: 22
+        width: 1823
+        height: 909
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64bee3b7177632aa0800000000000000
-      internalID: -6186987725980243130
+      spriteID: 33bdcf97337522c30800000000000000
+      internalID: 4333121670085401395
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a8f10893f28695b4889d16850f8e54d9
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprite_lantern_0001_0: -6186987725980243130
+      boat2_0: 4333121670085401395
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

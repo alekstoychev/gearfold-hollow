@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2e59b37322bbcfe46acd08034726acfd
+guid: 5b33a97c644bef247b06aa3e80c105a0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2963284649195725463
-    second: sprite_idle2_0
+      213: -3739594106071672821
+    second: sprite_lantern_idle_0002_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -50,8 +50,8 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 9
-  spritePivot: {x: 0.4, y: 0.15}
-  spritePixelsToUnits: 440
+  spritePivot: {x: 0.55, y: 0.25}
+  spritePixelsToUnits: 280
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite_idle2_0
+      name: sprite_lantern_idle_0002_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 46
-        width: 730
-        height: 1567
+        x: 259
+        y: 105
+        width: 710
+        height: 939
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96d125ccf4c40e6d0800000000000000
-      internalID: -2963284649195725463
+      spriteID: b08147749fa4a1cc0800000000000000
+      internalID: -3739594106071672821
       vertices: []
       indices: 
       edges: []
@@ -126,7 +126,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprite_idle2_0: -2963284649195725463
+      sprite_lantern_idle_0002_0: -3739594106071672821
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

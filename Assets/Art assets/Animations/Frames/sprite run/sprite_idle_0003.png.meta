@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a338638bdd8c2ad4faabd7f88c886095
+guid: b941871f80bc21e4ea76601bb65a8d5c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4737004113455809388
-    second: placeholder_boat_0
+      213: 615248400365661411
+    second: sprite_idle_0003_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,9 +49,9 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  alignment: 9
+  spritePivot: {x: 0.55, y: 0.25}
+  spritePixelsToUnits: 280
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: placeholder_boat_0
+      name: sprite_idle_0003_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 57
-        width: 635
-        height: 174
+        x: 391
+        y: 103
+        width: 391
+        height: 947
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49cf6e54bd7c24eb0800000000000000
-      internalID: -4737004113455809388
+      spriteID: 3ec2c60192dc98800800000000000000
+      internalID: 615248400365661411
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      placeholder_boat_0: -4737004113455809388
+      sprite_idle_0003_0: 615248400365661411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
