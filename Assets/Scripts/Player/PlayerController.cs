@@ -1,7 +1,9 @@
-using System;
-using DialogueSystem;
+using Interact;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Player
 {
@@ -12,7 +14,9 @@ namespace Player
         public float moveSpeed = 10.0f;
         public float horizontalDampening;
 
-        [NonSerialized] public static bool isInDialogue;
+        [Header("Sprites")] 
+        public Sprite walkingRightSprite;
+        public Sprite walkingLeftSprite;
         
         private PlayerInput playerInput;
         private Rigidbody2D rb;
@@ -21,10 +25,16 @@ namespace Player
 
         private InputAction moveAction;
         private InputAction interactAction;
+        
+        // Heyy sorry just animating
+        public Animator animator;
+        public float horizontalMove = 0f;
+        private Vector2 movement; 
+
         #endregion
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+        private void Start()
         {
             rb = gameObject.GetComponent<Rigidbody2D>();
             if (!rb)
@@ -59,12 +69,24 @@ namespace Player
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
+            //changing the animation from idle to running when moving
+            horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+            // mirroring the animation when going left. I feel like this might not be optimal but it works
+            movement = new Vector2(Input.GetAxis("Horizontal"), 0).normalized;
+            bool mirrored = movement.x < 0;
+            if (movement.x != 0)
+            {
+               this.transform.rotation = Quaternion.Euler(new Vector3(0f, mirrored ? 180f : 0f, 0f));
+            }
+
             Move();
         }
 
-        void FixedUpdate()
+        private void FixedUpdate()
         {
             CheckSpriteRotation();
         }
@@ -90,19 +112,14 @@ namespace Player
 
         private void CheckSpriteRotation()
         {
+            //this is where the flipped sprite with the different legs would come in handy
             if (rb.linearVelocityX > 0.1)
             {
-                if (!spriteRenderer.flipX)
-                {
-                    spriteRenderer.flipX = true;
-                } 
+                spriteRenderer.sprite = walkingRightSprite;
             }
             else if (rb.linearVelocityX < -0.1)
             {
-                if (spriteRenderer.flipX)
-                {
-                    spriteRenderer.flipX = false;
-                } 
+                spriteRenderer.sprite = walkingLeftSprite;
             }
         }
 
@@ -116,7 +133,7 @@ namespace Player
             {
                 if (rb.linearVelocity.x != 0)
                 {
-                    rb.linearVelocityX *= horizontalDampening;
+                    rb.linearVelocityX *= horizontalDampening *  Time.deltaTime;
                 }
             }
         }

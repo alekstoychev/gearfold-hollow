@@ -1,40 +1,46 @@
+using System;
 using DialogueSystem;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
+namespace Interact
 {
-    #region Variables
-    [Header("Dialogue")]
-    public GameObject textPopup;
-    public Dialogue dialogue;
+    public class Interactable : MonoBehaviour
+    {
+        #region Variables
+        [Header("Dialogue")]
+        public GameObject textPopup;
+        public Dialogue dialogue;
     
-    [Header("Interactable")]
-    public bool isInteractable;
-    #endregion
+        [Header("Interactable")]
+        public bool isInteractable;
 
-    void Awake()
-    {
-        textPopup.SetActive(false);
-    }
+        public static event Action<Dialogue> OnInteract;
+        #endregion
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (isInteractable)
-        {
-            textPopup.SetActive(true);
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (isInteractable)
+        private void Awake()
         {
             textPopup.SetActive(false);
         }
-    }
 
-    public void Interact()
-    {
-        DialogueManager.GetDialogueManager().TriggerDialogue(dialogue);
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (isInteractable)
+            {
+                textPopup.SetActive(true);
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (isInteractable)
+            {
+                textPopup.SetActive(false);
+            }
+        }
+
+        public void Interact()
+        {
+            OnInteract?.Invoke(dialogue);
+        }
     }
 }

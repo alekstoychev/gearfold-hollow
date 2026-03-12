@@ -1,0 +1,255 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1836382443551735028
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 50222818348411750, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.isInvolved
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.expression1
+      value: 
+      objectReference: {fileID: 7954260586210241843, guid: 60f25855a55dd4639973ee9689131b25, type: 3}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.expression2
+      value: 
+      objectReference: {fileID: 2771338142401635788, guid: 27c74d3857ac144e7b6585c66e90ea50, type: 3}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.speakerName
+      value: Bob the Tutorial Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.currentObjective
+      value: Tutorial 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.randomDialogue.Array.data[0]'
+      value: Hehehe~
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.randomDialogue.Array.data[1]'
+      value: :)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.randomDialogue.Array.data[0].text
+      value: Hello!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.randomDialogue.Array.data[1].text
+      value: :(
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.randomDialogue.Array.data[2].text
+      value: Maybe later
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.randomDialogue.Array.data[3].text
+      value: Hiiii!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.randomDialogue.Array.data[4].text
+      value: What are you up to?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.randomDialogue.Array.data[1].expression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.randomDialogue.Array.data[2].expression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveName
+      value: Tutorial 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveName
+      value: Tutorial 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].randomDialogue.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].randomDialogue.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].randomDialogue.Array.data[0]'
+      value: Go away.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].randomDialogue.Array.data[1]'
+      value: You can ask as many things as you want :3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].randomDialogue.Array.data[2]'
+      value: Welcome to Gearford Hollow!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].randomDialogue.Array.data[3]'
+      value: How are you doing?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[1].randomDialogue.Array.data[0]'
+      value: Go away.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[1].randomDialogue.Array.data[1]'
+      value: You can ask as many things as you want :3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[1].randomDialogue.Array.data[2]'
+      value: Welcome to Gearford Hollow!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[1].randomDialogue.Array.data[3]'
+      value: How are you doing?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[0]'
+      value: Hello there! You must be new here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1]'
+      value: Let me tell you about this town...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[2]'
+      value: It is pretty... Empty :(
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[3]'
+      value: It is pretty... Empty :(
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[0]'
+      value: Oh, you're back?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[1]'
+      value: How are you doing.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: 'dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[2]'
+      value: Let's go shopping!!! :D
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880599100711689534, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452996239584053558, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.24000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452996239584053558, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.24000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452996239584053558, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.24000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452996239584053558, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238093418266851244, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Name
+      value: Bob the Tutorial Cube Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Size.x
+      value: 7.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Size.y
+      value: 7.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0aa9196d6440a4cf1b2c10b2c6fafd08, type: 3}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543946615531252641, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.28999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.381
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
