@@ -67,10 +67,18 @@ namespace DialogueSystem
             speakerImage.sprite = null;
             
             doTypeWriter = false;
-
+            
+            //unityevent complete
+            
+            bool shouldExit = false;
             if (currentDialogue.GetCompleteObjectiveAfterText())
             {
-                currentDialogue.CompleteObjectiveDialogue();
+                shouldExit = true;
+            }
+            
+            currentDialogue.TriggerEndOfDialogue();
+            if (shouldExit)
+            {
                 return;
             }
             
