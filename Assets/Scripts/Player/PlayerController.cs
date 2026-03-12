@@ -2,6 +2,9 @@ using Interact;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+using System.Collections;
+using System.Collections.Generic;
+
 namespace Player
 {
     public class PlayerController : MonoBehaviour
@@ -22,6 +25,12 @@ namespace Player
 
         private InputAction moveAction;
         private InputAction interactAction;
+        
+        // Heyy sorry just animating
+        public Animator animator;
+        public float horizontalMove = 0f;
+        private Vector2 movement; 
+
         #endregion
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -62,6 +71,18 @@ namespace Player
         // Update is called once per frame
         private void Update()
         {
+            //changing the animation from idle to running when moving
+            horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+            // mirroring the animation when going left. I feel like this might not be optimal but it works
+            movement = new Vector2(Input.GetAxis("Horizontal"), 0).normalized;
+            bool mirrored = movement.x < 0;
+            if (movement.x != 0)
+            {
+               this.transform.rotation = Quaternion.Euler(new Vector3(0f, mirrored ? 180f : 0f, 0f));
+            }
+
             Move();
         }
 
@@ -91,6 +112,7 @@ namespace Player
 
         private void CheckSpriteRotation()
         {
+            //this is where the flipped sprite with the different legs would come in handy
             if (rb.linearVelocityX > 0.1)
             {
                 spriteRenderer.sprite = walkingRightSprite;
