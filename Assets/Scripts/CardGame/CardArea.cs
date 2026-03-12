@@ -9,12 +9,12 @@ namespace CardGame
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            handManager?.OnZoneEnter();
+            handManager?.SetZoneHovered(true);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            handManager?.OnZoneExit();
+            handManager?.SetZoneHovered(false);
         }
     }
 }
