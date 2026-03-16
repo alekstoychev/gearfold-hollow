@@ -25,9 +25,21 @@ namespace ObjectiveSystem
     {
         [SerializeField] private List<Objective> objectives = new();
         private int currentObjectiveIndex = 0;
-
+        
+        private static ObjectiveManager Instance { get; set; }
+        
         private void Awake()
         {
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            
             UpdatePeopleInvolved();
         }
 

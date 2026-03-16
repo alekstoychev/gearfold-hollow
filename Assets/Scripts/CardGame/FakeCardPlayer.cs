@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace CardGame
 {
@@ -7,16 +9,42 @@ namespace CardGame
         [SerializeField] private CardDeck cardDeck;
         [SerializeField] private HandManager fakeHandManager;
         
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
 
+        public IEnumerator PickACard()
+        {
+            int lastSelected = -1;
+            for (int i = 0; i < 3; i++)
+            {
+                int randIdx = Random.Range(0, fakeHandManager.GetCurrentCardAmount());
+                while (randIdx == lastSelected)
+                {
+                    randIdx = Random.Range(0, fakeHandManager.GetCurrentCardAmount());
+                }
+                
+                lastSelected = randIdx;
+                
+                fakeHandManager.SetCardHovered(randIdx, true);
+                fakeHandManager.SetZoneHovered(false);
+                
+                yield return new WaitForSeconds(0.5f);
+
+                if (i == 2)
+                {
+                    fakeHandManager.OnCardSelect(randIdx);
+                    break;
+                }
+                
+                fakeHandManager.SetCardHovered(randIdx, false);
+                
+                yield return new WaitForSeconds(0.3f);
+            }
         }
 
-        // Update is called once per frame
-        void Update()
+        public RockPaperScissors PickRockPaperScissors()
         {
-
+            int rand = Random.Range(1, 4);
+            Debug.Log($"AI: I have picked: {rand}");
+            return (RockPaperScissors)rand;
         }
     }
 }
