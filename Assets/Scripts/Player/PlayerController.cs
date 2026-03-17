@@ -1,3 +1,4 @@
+using System;
 using Interact;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -65,6 +66,14 @@ namespace Player
             if (!spriteRenderer)
             {
                 Debug.LogError($"{name} did not find Sprite Renderer component.");
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (interactAction != null)
+            {
+                interactAction.performed -= OnInteractPerformed;
             }
         }
 

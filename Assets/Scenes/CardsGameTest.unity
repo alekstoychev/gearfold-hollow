@@ -1242,11 +1242,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1086471461 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6447312821829898614, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
-  m_PrefabInstance: {fileID: 1962571968}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1233124737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1273,6 @@ Transform:
   m_Children:
   - {fileID: 1332769552}
   - {fileID: 1297373469}
-  - {fileID: 1962571969}
   - {fileID: 213873366}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1430,10 +1424,10 @@ MonoBehaviour:
   onPlayerWinGame:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1086471461}
-        m_TargetAssemblyTypeName: Systems.CustomSceneManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 5
+      - m_Target: {fileID: 1962571969}
+        m_TargetAssemblyTypeName: ObjectiveSystem.ObjectiveManager, Assembly-CSharp
+        m_MethodName: ProgressObjective
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1457,6 +1451,30 @@ MonoBehaviour:
   onPlayerLoseGame:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1962571969}
+        m_TargetAssemblyTypeName: ObjectiveSystem.ObjectiveManager, Assembly-CSharp
+        m_MethodName: ProgressObjective
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainStreet
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1962571969}
+        m_TargetAssemblyTypeName: ObjectiveSystem.ObjectiveManager, Assembly-CSharp
+        m_MethodName: ProgressObjective
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainStreet
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 213873368}
         m_TargetAssemblyTypeName: Systems.CustomSceneManager, Assembly-CSharp
         m_MethodName: LoadScene
@@ -1884,7 +1902,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1233124738}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6447312821829898614, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
       propertyPath: m_Name
@@ -1892,11 +1910,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -416.89545
+      value: 551.48865
       objectReference: {fileID: 0}
     - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -32.84445
+      value: 507.47873
       objectReference: {fileID: 0}
     - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1908,15 +1926,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1935,11 +1953,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
---- !u!4 &1962571969 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
+--- !u!114 &1962571969 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7591590870529042000, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
   m_PrefabInstance: {fileID: 1962571968}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c755f146870f4409aa8abfba4de8aec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveSystem.ObjectiveManager
 --- !u!1 &1983706084
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,7 +2983,7 @@ PrefabInstance:
       objectReference: {fileID: 1933388446}
     - target: {fileID: 7266155424772900714, guid: d4bf21a37cc0343249dc305819655187, type: 3}
       propertyPath: defaultCards.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3176,3 +3200,4 @@ SceneRoots:
   - {fileID: 1233124738}
   - {fileID: 1030712038}
   - {fileID: 307583765}
+  - {fileID: 1962571968}

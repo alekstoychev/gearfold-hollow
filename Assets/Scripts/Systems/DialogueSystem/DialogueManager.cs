@@ -270,6 +270,12 @@ namespace DialogueSystem
             Interactable.OnInteract += TriggerDialogue;
             dialogueBox.OnContinueDialogue += OnContinueDialogueTriggered;
         }
+        
+        private void OnDestroy()
+        {
+            Interactable.OnInteract -= TriggerDialogue;
+            dialogueBox.OnContinueDialogue -= OnContinueDialogueTriggered;
+        }
 
         private void OnContinueDialogueTriggered(bool canContinue)
         {

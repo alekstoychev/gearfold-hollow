@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Interact;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +12,6 @@ namespace DialogueSystem
         #region Variables
         [Header("Dialogue Box")]
         public Image dialogueBoxBackground;
-        public Image dialogueBoxBackground2;
         public TextMeshProUGUI speakerTitleBox;
         public TextMeshProUGUI speakerTextBox;
         public Image speakerImage;
@@ -43,7 +43,6 @@ namespace DialogueSystem
             fullDialogue = dialogueToAdd.GetDialogue();
             
             dialogueBoxBackground.enabled = true;
-            dialogueBoxBackground2.enabled = true;
             speakerTitleBox.enabled = true;
             speakerTextBox.enabled = true;
             speakerTextBox.text = "";
@@ -60,7 +59,6 @@ namespace DialogueSystem
         public void HideDialogueBox()
         {
             dialogueBoxBackground.enabled = false;
-            dialogueBoxBackground2.enabled = false;
             speakerTitleBox.enabled = false;
             speakerTextBox.enabled = false;
             speakerImage.enabled = false;

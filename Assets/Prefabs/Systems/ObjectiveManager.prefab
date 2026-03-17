@@ -51,3 +51,15 @@ MonoBehaviour:
   - name: Ferryman Port
     peopleInvolved:
     - Ferryman
+  - name: Merchant Introduction
+    peopleInvolved:
+    - Merchant
+  - name: Merchant Win Cards
+    peopleInvolved:
+    - Merchant
+  - name: Merchant Lose Cards
+    peopleInvolved:
+    - Merchant
+  - name: Merchant After Cards
+    peopleInvolved:
+    - Merchant

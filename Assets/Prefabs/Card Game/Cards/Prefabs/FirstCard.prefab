@@ -150,7 +150,7 @@ MonoBehaviour:
   handManager: {fileID: 0}
   healthText: {fileID: 883898822135643230}
   damageText: {fileID: 2093429428204561828}
-  damage: 3
+  damage: 5
   health: 5
   damageDecreaseRate: 2
   cardType: 1
