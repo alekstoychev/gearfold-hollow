@@ -16,9 +16,12 @@ namespace CardGame
             for (int i = 0; i < 3; i++)
             {
                 int randIdx = Random.Range(0, fakeHandManager.GetCurrentCardAmount());
-                while (randIdx == lastSelected)
+                if (fakeHandManager.GetCurrentCardAmount() > 1)
                 {
-                    randIdx = Random.Range(0, fakeHandManager.GetCurrentCardAmount());
+                    while (randIdx == lastSelected)
+                    {
+                        randIdx = Random.Range(0, fakeHandManager.GetCurrentCardAmount());
+                    }
                 }
                 
                 lastSelected = randIdx;
@@ -27,8 +30,8 @@ namespace CardGame
                 fakeHandManager.SetZoneHovered(false);
                 
                 yield return new WaitForSeconds(0.5f);
-
-                if (i == 2)
+                
+                if (i == 2 || fakeHandManager.GetCurrentCardAmount() == 1)
                 {
                     fakeHandManager.OnCardSelect(randIdx);
                     break;

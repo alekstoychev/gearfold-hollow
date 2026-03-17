@@ -23,8 +23,8 @@ namespace ObjectiveSystem
     
     public class ObjectiveManager : MonoBehaviour
     {
-        [SerializeField] private List<Objective> objectives = new();
-        private int currentObjectiveIndex = 0;
+        [SerializeField] public List<Objective> objectives = new();
+        public int currentObjectiveIndex = 0;
         
         private static ObjectiveManager Instance { get; set; }
         

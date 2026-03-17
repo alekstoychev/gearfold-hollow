@@ -26,8 +26,8 @@ namespace DialogueSystem
     public struct ObjectiveDialogueText
     {
         public DialogueText dialogueText;
-        public float autoContinueDelay;
-        public bool autoContinue;
+        //public float autoContinueDelay;
+        //public bool autoContinue;
         public bool completeObjectiveAfterText;
         
         public UnityEvent onDialogueContinue;
@@ -49,27 +49,41 @@ namespace DialogueSystem
         [SerializeField] private List<ObjectiveDialogueText> objectiveDialoguesText;
         private int currentIdx = -1;
 
-        public float GetWaitTimeAfterText()
+        /*public float GetWaitTimeAfterText()
         {
             return objectiveDialoguesText[currentIdx].autoContinueDelay;
-        }
+        }*/
 
         public void TriggerEndOfDialogue()
         {
-            objectiveDialoguesText[currentIdx].onDialogueContinue?.Invoke();
+            if (currentIdx < objectiveDialoguesText.Count && currentIdx >= 0)
+            {
+                objectiveDialoguesText[currentIdx].onDialogueContinue?.Invoke();
+            }
         }
 
         public bool GetCompleteObjectiveAfterText()
         {
-            return objectiveDialoguesText[currentIdx].completeObjectiveAfterText;
+            if (currentIdx < objectiveDialoguesText.Count && currentIdx >= 0)
+            {
+                return objectiveDialoguesText[currentIdx].completeObjectiveAfterText;
+            }
+            
+            Debug.LogWarning($"Invalid currentIdx: {currentIdx}");
+            return true;
         }
 
         public Expression GetExpression()
         {
-            return objectiveDialoguesText[currentIdx].dialogueText.expression;
+            if (currentIdx < objectiveDialoguesText.Count)
+            {
+                return objectiveDialoguesText[currentIdx].dialogueText.expression;
+            }
+            
+            return Expression.Expression1;
         }
 
-        public bool GetContinueAfterText()
+        /*public bool GetContinueAfterText()
         {
             if (currentIdx >= 0 && currentIdx < objectiveDialoguesText.Count)
             {
@@ -77,13 +91,14 @@ namespace DialogueSystem
             }
             
             return false;
-        }
+        }*/
 
         public string GetNewObjectiveDialogue()
         {
+            currentIdx++;
             if (currentIdx < objectiveDialoguesText.Count)
             {
-                return objectiveDialoguesText[++currentIdx];
+                return objectiveDialoguesText[currentIdx];
             }
             
             Debug.LogError($"No objective dialogue available at {currentIdx}");
@@ -147,14 +162,17 @@ namespace DialogueSystem
 
         public void TriggerEndOfDialogue()
         {
-            GetCurrentObjective().TriggerEndOfDialogue();
+            if (GetCurrentObjective() != null)
+            {
+                GetCurrentObjective().TriggerEndOfDialogue();
+            }
         }
 
         public Sprite GetExpressionSprite()
         {
             Expression expression = randomDialogue[lastDialogueIdx].expression;
             
-            if (GetCurrentObjective() != null)
+            if (GetCurrentObjective() != null && isInvolved)
             {
                 expression = GetCurrentObjective().GetExpression();
             }
@@ -170,7 +188,7 @@ namespace DialogueSystem
             }
         }
 
-        public float GetWaitTimeAfterText()
+        /*public float GetWaitTimeAfterText()
         {
             if (GetCurrentObjective() != null)
             {
@@ -188,7 +206,7 @@ namespace DialogueSystem
             }
             
             return false;
-        }
+        }*/
         
         public bool GetCompleteObjectiveAfterText()
         {

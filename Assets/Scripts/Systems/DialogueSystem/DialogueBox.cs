@@ -68,25 +68,26 @@ namespace DialogueSystem
             
             //unityevent complete
             
-            bool shouldExit = false;
-            if (currentDialogue.GetCompleteObjectiveAfterText())
-            {
-                shouldExit = true;
-            }
-            
             currentDialogue.TriggerEndOfDialogue();
-            if (shouldExit)
+            if (currentDialogue.GetCompleteObjectiveAfterText())
             {
                 return;
             }
+
+            if (currentDialogue.isInvolved)
+            {
+                canContinueDialogue = false;
+                StartCoroutine(ShowDialogueAfterDelay());
+            }
             
+            /*
             Debug.Log($"Checking continue after dialogue {currentDialogue.GetContinueAfterText()}, {currentDialogue.GetWaitTimeAfterText()}");
             if (currentDialogue.GetContinueAfterText())
             {
                 canContinueDialogue = false;
                 StartCoroutine(ShowDialogueAfterDelay());
                 Debug.Log($"Activating Coroutine.");
-            }
+            }*/
         }
 
         private void Update()
@@ -120,7 +121,7 @@ namespace DialogueSystem
         
         private IEnumerator ShowDialogueAfterDelay()
         {
-            yield return new WaitForSeconds(currentDialogue.GetWaitTimeAfterText());
+            yield return new WaitForSeconds(1.2f);
             
             canContinueDialogue = true;
             ShowDialogueBox(currentDialogue);

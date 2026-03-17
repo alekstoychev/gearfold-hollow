@@ -3794,7 +3794,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1905468799}
         m_TargetAssemblyTypeName: ObjectiveSystem.ObjectiveManager, Assembly-CSharp
         m_MethodName: DebugGetCurrentObjective
         m_Mode: 2
@@ -4604,7 +4604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5250,7 +5250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4880599100711689534, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7452996239584053558, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
       propertyPath: m_LocalScale.x
