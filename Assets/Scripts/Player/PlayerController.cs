@@ -137,5 +137,11 @@ namespace Player
                 }
             }
         }
+        
+        public void Lantern()
+        {
+            animator.SetBool("GotLantern", true);
+        }
     }
 }
+
