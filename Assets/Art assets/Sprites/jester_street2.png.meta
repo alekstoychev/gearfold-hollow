@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 84a9b28c57ba35b4cb6d04a80aa6c9d2
+guid: 2cb5aa2949805da4a8a016b073259256
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4421771186505095019
-    second: merchant_street_0
+      213: -9148698514583435676
+    second: jester_street2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,9 +49,9 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 105
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.03}
+  spritePixelsToUnits: 350
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: merchant_street_0
+      name: jester_street2_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 23
-        width: 1186
-        height: 1792
+        x: 375
+        y: 7
+        width: 707
+        height: 1719
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5986e4e8886b2a2c0800000000000000
-      internalID: -4421771186505095019
+      spriteID: 4664c114c2b490180800000000000000
+      internalID: -9148698514583435676
       vertices: []
       indices: 
       edges: []
@@ -126,7 +126,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      merchant_street_0: -4421771186505095019
+      jester_street2_0: -9148698514583435676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
