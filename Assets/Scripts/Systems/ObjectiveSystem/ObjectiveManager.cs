@@ -26,19 +26,9 @@ namespace ObjectiveSystem
         [SerializeField] public List<Objective> objectives = new();
         public int currentObjectiveIndex = 0;
         
-        private static ObjectiveManager Instance { get; set; }
-        
         private void Awake()
         {
-            if (Instance == null)
-            {
-                Instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            currentObjectiveIndex = PlayerPrefs.GetInt("CurrentObjectiveIndex", 0);
             
             UpdatePeopleInvolved();
         }
@@ -69,6 +59,9 @@ namespace ObjectiveSystem
             ObjectiveManager objectiveManager = FindFirstObjectByType<ObjectiveManager>();
             objectiveManager.currentObjectiveIndex++;
             objectiveManager.UpdatePeopleInvolved();
+            
+            PlayerPrefs.SetInt("CurrentObjectiveIndex", objectiveManager.currentObjectiveIndex);
+            PlayerPrefs.Save();
         }
 
         private void UpdatePeopleInvolved()

@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 778613696}
   - component: {fileID: 778613698}
   - component: {fileID: 778613697}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1992,7 +1992,7 @@ GameObject:
   - component: {fileID: 1234180296}
   - component: {fileID: 1234180295}
   - component: {fileID: 1234180297}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3406,7 +3406,7 @@ GameObject:
   - component: {fileID: 2131542055}
   - component: {fileID: 2131542057}
   - component: {fileID: 2131542056}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3682,6 +3682,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1302618876029237480, guid: 4180a2b779680834299e854d5d8f8850, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2505472268274595664, guid: 4180a2b779680834299e854d5d8f8850, type: 3}
       propertyPath: m_Size.x
       value: 2.7607143
@@ -3757,14 +3761,6 @@ PrefabInstance:
     - target: {fileID: 7726979217913373682, guid: 4180a2b779680834299e854d5d8f8850, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.2900002
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109737224275637601, guid: 4180a2b779680834299e854d5d8f8850, type: 3}
-      propertyPath: m_Mass
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109737224275637601, guid: 4180a2b779680834299e854d5d8f8850, type: 3}
-      propertyPath: m_Simulated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8809403240382089610, guid: 4180a2b779680834299e854d5d8f8850, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x

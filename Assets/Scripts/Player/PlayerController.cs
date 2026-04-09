@@ -19,6 +19,15 @@ namespace Player
         public Sprite walkingRightSprite;
         public Sprite walkingLeftSprite;
         
+        [Header("Slope Handling")]
+        public float slopeRayLength = 0.8f;      
+        public float maxSlopeAngle = 45f;     
+        public LayerMask groundLayer;
+        private Vector2 slopeNormalPerp;         
+        private bool isOnSlope;
+        private bool wasOnSlope;
+        private float currentSlopeAngle;
+        
         private PlayerInput playerInput;
         private Rigidbody2D rb;
         private Collider2D collision;
@@ -97,7 +106,13 @@ namespace Player
 
         private void FixedUpdate()
         {
+            UpdateSlopeInfo();
             CheckSpriteRotation();
+            
+            if (isOnSlope && currentSlopeAngle > 15f && rb.linearVelocityY > -0.1f)
+            {
+                rb.AddForce(Vector2.down * 3f, ForceMode2D.Force);
+            }
         }
 
         private void OnInteractPerformed(InputAction.CallbackContext callbackContext)
@@ -136,14 +151,63 @@ namespace Player
         {
             if (moveAction.IsPressed())
             {
-                rb.linearVelocityX = moveAction.ReadValue<Vector2>().x * moveSpeed;
+                float inputX = moveAction.ReadValue<Vector2>().x;
+                float targetVelocityX = inputX * moveSpeed;
+
+                if (isOnSlope)
+                {
+                    Vector2 slopeMove = slopeNormalPerp * targetVelocityX;
+                    rb.linearVelocity = new Vector2(slopeMove.x, slopeMove.y);
+                }
+                else
+                {
+                    rb.linearVelocityX = targetVelocityX;
+
+                    if (wasOnSlope && rb.linearVelocityY > 0)
+                    {
+                        rb.linearVelocity = new Vector2(rb.linearVelocityX, 0);
+                    }
+                }
             }
             else
             {
-                if (rb.linearVelocity.x != 0)
+                if (!isOnSlope)
                 {
-                    rb.linearVelocityX *= horizontalDampening *  Time.deltaTime;
+                    rb.linearVelocityX *= horizontalDampening * Time.deltaTime;
                 }
+                else if (isOnSlope)
+                {
+                    rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, horizontalDampening * Time.deltaTime);
+                }
+            }
+            
+            wasOnSlope = isOnSlope;
+        }
+        
+        private bool IsGrounded(out RaycastHit2D hit)
+        {
+            Vector2 origin = collision.bounds.center - new Vector3(0, collision.bounds.extents.y);
+            hit = Physics2D.Raycast(origin, Vector2.down, slopeRayLength, groundLayer);
+            return hit.collider != null;
+        }
+
+        private void UpdateSlopeInfo()
+        {
+            RaycastHit2D hit;
+            if (IsGrounded(out hit))
+            {
+                currentSlopeAngle = Vector2.Angle(hit.normal, Vector2.up);
+                isOnSlope = currentSlopeAngle > 0 && currentSlopeAngle <= maxSlopeAngle;
+        
+                if (isOnSlope)
+                {
+                    slopeNormalPerp = new Vector2(hit.normal.y, -hit.normal.x);
+                }
+            }
+            else
+            {
+                isOnSlope = false;
+                currentSlopeAngle = 0;
             }
         }
         

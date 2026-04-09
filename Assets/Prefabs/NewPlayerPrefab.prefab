@@ -423,6 +423,11 @@ MonoBehaviour:
   horizontalDampening: 0.96
   walkingRightSprite: {fileID: -5710639068552120381, guid: 59e4ab9f5c9da49319c5a8e1956a45af, type: 3}
   walkingLeftSprite: {fileID: 21300000, guid: 953ef71d869aa4cc29c15df6ed7cb119, type: 3}
+  slopeRayLength: 0.8
+  maxSlopeAngle: 45
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   animator: {fileID: 1046612078789419439}
   horizontalMove: 0
 --- !u!114 &6697064851484282822
@@ -513,7 +518,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2000
   m_LinearDamping: 0
   m_AngularDamping: 1
   m_GravityScale: 1
