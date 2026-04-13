@@ -5,15 +5,6 @@ TextureImporter:
   - first:
       213: -9023033428973963139
     second: Timeline 1_0008_0
-  - first:
-      213: -4736372458229140508
-    second: Timeline 1_0008_1
-  - first:
-      213: -1339810026145827860
-    second: Timeline 1_0008_2
-  - first:
-      213: -7271849192075829510
-    second: Timeline 1_0008_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,10 +103,10 @@ TextureImporter:
       name: Timeline 1_0008_0
       rect:
         serializedVersion: 2
-        x: 1114
-        y: 370
-        width: 122
-        height: 250
+        x: 1133
+        y: 184
+        width: 241
+        height: 568
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,72 +117,6 @@ TextureImporter:
       bones: []
       spriteID: d78388507eeb7c280800000000000000
       internalID: -9023033428973963139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Timeline 1_0008_1
-      rect:
-        serializedVersion: 2
-        x: 1117
-        y: 123
-        width: 247
-        height: 624
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4e3fe47f756054eb0800000000000000
-      internalID: -4736372458229140508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Timeline 1_0008_2
-      rect:
-        serializedVersion: 2
-        x: 1169
-        y: 88
-        width: 17
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ce3321d31e9086de0800000000000000
-      internalID: -1339810026145827860
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Timeline 1_0008_3
-      rect:
-        serializedVersion: 2
-        x: 1185
-        y: 113
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: afedb1e00b3351b90800000000000000
-      internalID: -7271849192075829510
       vertices: []
       indices: 
       edges: []
@@ -211,9 +136,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Timeline 1_0008_0: -9023033428973963139
-      Timeline 1_0008_1: -4736372458229140508
-      Timeline 1_0008_2: -1339810026145827860
-      Timeline 1_0008_3: -7271849192075829510
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
