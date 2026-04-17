@@ -1,0 +1,503 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1449692223631256031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9018817278753265292}
+  - component: {fileID: 7277127404800503936}
+  m_Layer: 0
+  m_Name: Square
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9018817278753265292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449692223631256031}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.08, y: 1.45, z: 0}
+  m_LocalScale: {x: 0.21, y: 0.21, z: 0.21}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 4282538996201623675}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &7277127404800503936
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449692223631256031}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 21300000, guid: 84a9b28c57ba35b4cb6d04a80aa6c9d2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10.741667, y: 18.002401}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!1 &3120704830573924689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5991975405446025206}
+  - component: {fileID: 3758993393513779614}
+  m_Layer: 0
+  m_Name: Interact Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5991975405446025206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3120704830573924689}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.57, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 4282538996201623675}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3758993393513779614
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3120704830573924689}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 1622727937493990531, guid: 0b4bca2cfa6904ad48951f528a2839d3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!1 &4496687567073895488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4282538996201623675}
+  - component: {fileID: 8121595439462430391}
+  - component: {fileID: 7251864064322095062}
+  m_Layer: 0
+  m_Name: Merchant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4282538996201623675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4496687567073895488}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.3, y: 21.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9018817278753265292}
+  - {fileID: 5991975405446025206}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8121595439462430391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4496687567073895488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7172a07295b4af6888ac6ca8e74d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  isInteractable: 1
+  interactableType: 0
+  textPopup: {fileID: 3120704830573924689}
+  dialogue:
+    speakerName: Merchant
+    expression1: {fileID: -2130589401343625317, guid: e1cb955bed2274c56a6d1b23569c0527, type: 3}
+    expression2: {fileID: -1841651273980143786, guid: 8d547605ec9534b0cbec997374504b27, type: 3}
+    randomDialogue:
+    - text: Hiiiiii!!!!
+      expression: 0
+    - text: Helloo!!!
+      expression: 1
+    - text: Welcome to town!
+      expression: 1
+    - text: You got games on yo phone?
+      expression: 1
+    - text: :D
+      expression: 0
+    objectiveDialogues:
+    - objectiveName: Merchant Introduction
+      randomDialogue: []
+      objectiveDialoguesText:
+      - dialogueText:
+          text: "Hey there, buddy! You don\u2019t look like you\u2019re from this
+            town. Here for the carnival? I\u2019ve got a lot of stuff you might be
+            interested in. You would need to have something to exchange it for, though."
+          expression: 0
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls: []
+      - dialogueText:
+          text: 'But ah, whatcha got there? '
+          expression: 1
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls: []
+      - dialogueText:
+          text: "A pretty, shiny thing now, ain\u2019t it? Sorry to say but I don\u2019t
+            think that\u2019s working. Not for sale, I assume? Should've guessed."
+          expression: 1
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls: []
+      - dialogueText:
+          text: "I don\u2019t think a watch will be of help to you here, no matter
+            the sentimental value. What you need is a light. The shadows grow tall
+            right outside the main streets."
+          expression: 0
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls: []
+      - dialogueText:
+          text: "The night is always deep around here, so you could find it useful.
+            As a matter of fact I happen to have a lantern. I could even give it
+            to you for free, that\u2019s how nice I am!"
+          expression: 1
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls: []
+      - dialogueText:
+          text: "Ah, ah, ah! I said free, not as a gift. I\u2019ll make you an offer,
+            right? Let\u2019s play a game of cards and if you win, I give you the
+            lantern."
+          expression: 1
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls: []
+      - dialogueText:
+          text: "You ain\u2019t played before? Blimey, you\u2019re in for a ride!
+            Eh, don\u2019t look so worried. I wouldn\u2019t scam a newcomer, not
+            you anyways!"
+          expression: 0
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls: []
+      - dialogueText:
+          text: If you win, I have to give you a card. But if you lose, you give
+            me a card from your deck. How does that sound, eh?
+          expression: 1
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: Systems.CustomSceneManager, Assembly-CSharp
+              m_MethodName: LoadScene
+              m_Mode: 5
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: CardsGameTest
+                m_BoolArgument: 0
+              m_CallState: 2
+    - objectiveName: Merchant Win Cards
+      randomDialogue: []
+      objectiveDialoguesText:
+      - dialogueText:
+          text: "Ooh, well done.You ain\u2019t as sloppy with your cards as you look.
+            I\u2019m not a sore loser, so here. As the deal goes."
+          expression: 1
+        completeObjectiveAfterText: 1
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 8121595439462430391}
+              m_TargetAssemblyTypeName: Interact.Interactable, Assembly-CSharp
+              m_MethodName: SetObjectiveIndex
+              m_Mode: 3
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 3
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+            - m_Target: {fileID: 8121595439462430391}
+              m_TargetAssemblyTypeName: Interact.Interactable, Assembly-CSharp
+              m_MethodName: Interact
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: Player.PlayerController, Assembly-CSharp
+              m_MethodName: Lantern
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - objectiveName: Merchant Lose Cards
+      randomDialogue: []
+      objectiveDialoguesText:
+      - dialogueText:
+          text: "Oh, too bad! Don\u2019t be too bummed out about it, I\u2019m a tough
+            opponent to beat. But hey, here\u2019s the lantern, I\u2019m a man of
+            my word. You\u2019d better learn how to play cards if you wanna get anywhere
+            in this town, though."
+          expression: 0
+        completeObjectiveAfterText: 1
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 8121595439462430391}
+              m_TargetAssemblyTypeName: Interact.Interactable, Assembly-CSharp
+              m_MethodName: ProgressDialogueObjective
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+            - m_Target: {fileID: 8121595439462430391}
+              m_TargetAssemblyTypeName: Interact.Interactable, Assembly-CSharp
+              m_MethodName: Interact
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: Player.PlayerController, Assembly-CSharp
+              m_MethodName: Lantern
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    - objectiveName: Merchant After Cards
+      randomDialogue: []
+      objectiveDialoguesText:
+      - dialogueText:
+          text: "Now go have fun lad! The carnival is thriving, there\u2019s a lot
+            of fun to be had and the night is still young. And if you need to purchase
+            anything, you know where to find me."
+          expression: 1
+        completeObjectiveAfterText: 1
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 8121595439462430391}
+              m_TargetAssemblyTypeName: Interact.Interactable, Assembly-CSharp
+              m_MethodName: ProgressDialogueObjective
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+    currentObjectiveIdx: 0
+  OnEnterPlace:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!61 &7251864064322095062
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4496687567073895488}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 1.2}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 4.34, y: 4.22}
+  m_EdgeRadius: 0

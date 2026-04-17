@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+#if false
 namespace ObjectiveSystem
 {
+    [Obsolete]
     [Serializable] public struct Objective
     {
         public string name;
@@ -21,6 +23,7 @@ namespace ObjectiveSystem
         }
     }
     
+    [Obsolete]
     public class ObjectiveManager : MonoBehaviour
     {
         [SerializeField] public List<Objective> objectives = new();
@@ -64,6 +67,15 @@ namespace ObjectiveSystem
             PlayerPrefs.Save();
         }
 
+        public static void GoToObjective(string objectiveName)
+        {
+            ObjectiveManager objectiveManager = FindFirstObjectByType<ObjectiveManager>();
+            for (int i = 0; i < objectiveManager.objectives.Count; i++)
+            {
+                
+            }
+        }
+
         private void UpdatePeopleInvolved()
         {
             if (currentObjectiveIndex >= objectives.Count || currentObjectiveIndex < 0)
@@ -85,4 +97,4 @@ namespace ObjectiveSystem
         }
     }
 }
-
+#endif

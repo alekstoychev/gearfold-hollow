@@ -26,16 +26,15 @@ namespace DialogueSystem
 
         private bool canContinueDialogue = true;
         private Dialogue currentDialogue;
+        private bool isOnCooldown;
 
         public event Action<bool> OnContinueDialogue;
         #endregion
     
         public void ShowDialogueBox(Dialogue dialogueToAdd)
         {
-            if (!canContinueDialogue)
-            {
-                return;
-            }
+            if (!canContinueDialogue) return;
+            if (isOnCooldown) return;
             
             currentDialogue = dialogueToAdd;
             
@@ -58,6 +57,8 @@ namespace DialogueSystem
 
         public void HideDialogueBox()
         {
+            if (isOnCooldown) return;
+            
             dialogueBoxBackground.enabled = false;
             speakerTitleBox.enabled = false;
             speakerTextBox.enabled = false;
@@ -74,7 +75,7 @@ namespace DialogueSystem
                 return;
             }
 
-            if (currentDialogue.isInvolved)
+            if (currentDialogue.IsInObjective())
             {
                 canContinueDialogue = false;
                 StartCoroutine(ShowDialogueAfterDelay());
@@ -121,9 +122,11 @@ namespace DialogueSystem
         
         private IEnumerator ShowDialogueAfterDelay()
         {
+            isOnCooldown = true;
             yield return new WaitForSeconds(1.2f);
             
             canContinueDialogue = true;
+            isOnCooldown = false;
             ShowDialogueBox(currentDialogue);
             OnContinueDialogue?.Invoke(true);
         }

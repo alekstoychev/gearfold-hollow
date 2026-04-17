@@ -1,6 +1,7 @@
 using Interact;
 using UnityEngine;
 
+#if false
 namespace ObjectiveSystem
 {
     public class ObjectiveListener : MonoBehaviour
@@ -35,3 +36,4 @@ namespace ObjectiveSystem
         }
     }
 }
+#endif

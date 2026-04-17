@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
+using Interact;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Object = System.Object;
 
 namespace CardGame
 {
@@ -65,7 +68,8 @@ namespace CardGame
             minigameResultsText.text = "You win!";
             
             yield return new WaitForSeconds(1f);
-            
+
+            SceneManager.sceneLoaded += OnPlayerWinLoad;
             onPlayerWinGame.Invoke();
         }
 
@@ -80,6 +84,7 @@ namespace CardGame
             
             yield return new WaitForSeconds(1f);
             
+            SceneManager.sceneLoaded -= OnPlayerLoseLoad;
             onPlayerLoseGame.Invoke();
         }
         
@@ -310,6 +315,28 @@ namespace CardGame
         {
             button.SetActive(active);
             button.GetComponent<Button>().interactable = active;
+        }
+
+        private void OnPlayerWinLoad(Scene scene, LoadSceneMode mode)
+        {
+            Interactable merchant = GameObject.Find("Merchant").GetComponent<Interactable>();
+            merchant.hasPlayedCards = true;
+            merchant.hasWonCards = true;
+            
+            Debug.Log("Merchant has been informed about the player's win.");
+            
+            SceneManager.sceneLoaded -= OnPlayerWinLoad;
+        }
+
+        private void OnPlayerLoseLoad(Scene scene, LoadSceneMode mode)
+        {
+            Interactable merchant = GameObject.Find("Merchant").GetComponent<Interactable>();
+            merchant.hasPlayedCards = true;
+            merchant.hasWonCards = false;
+            
+            Debug.Log("Merchant has been informed about the player's loss.");
+            
+            SceneManager.sceneLoaded -= OnPlayerLoseLoad;
         }
     }
 }

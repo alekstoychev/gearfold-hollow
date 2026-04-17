@@ -128,9 +128,12 @@ namespace Player
                 {
                     continue;
                 }
-                
-                interactable.Interact();
-                break;
+
+                if (interactable.isInteractable)
+                {
+                    interactable.Interact();
+                    break;
+                }
             }
         }
 

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Interact;
-using ObjectiveSystem;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -95,6 +94,8 @@ namespace DialogueSystem
 
         public string GetNewObjectiveDialogue()
         {
+            if (!IsInObjectiveDialogue()) return GetRandomDialogue();
+            
             currentIdx++;
             if (currentIdx < objectiveDialoguesText.Count)
             {
@@ -148,23 +149,42 @@ namespace DialogueSystem
         [Tooltip("Whenever the object is interacted with when involved in an objective")]
         [SerializeField] private List<ObjectiveDialogue> objectiveDialogues;
 
-        public bool isInvolved;
+        //public bool isInvolved;
 
         //public event Action OnObjectiveDialogueComplete;
         
         private int lastDialogueIdx;
+        public int currentObjectiveIdx = 0;
         #endregion
+
+        public bool IsInObjective()
+        {
+            return currentObjectiveIdx < objectiveDialogues.Count;
+        }
 
         /*public void CompleteObjectiveDialogue()
         {
             OnObjectiveDialogueComplete?.Invoke();
         }*/
 
+        public void ProgressObjectiveDialogue()
+        {
+            if (IsInObjective())
+            {
+                currentObjectiveIdx++;
+            }
+        }
+
+        public void SetObjectiveIndex(int idx)
+        {
+            currentObjectiveIdx = idx;
+        }
+
         public void TriggerEndOfDialogue()
         {
-            if (GetCurrentObjective() != null)
+            if (IsInObjective())
             {
-                GetCurrentObjective().TriggerEndOfDialogue();
+                objectiveDialogues[currentObjectiveIdx].TriggerEndOfDialogue();
             }
         }
 
@@ -172,9 +192,9 @@ namespace DialogueSystem
         {
             Expression expression = randomDialogue[lastDialogueIdx].expression;
             
-            if (GetCurrentObjective() != null && isInvolved)
+            if (IsInObjective())
             {
-                expression = GetCurrentObjective().GetExpression();
+                expression = objectiveDialogues[currentObjectiveIdx].GetExpression();
             }
             
             switch (expression)
@@ -210,9 +230,9 @@ namespace DialogueSystem
         
         public bool GetCompleteObjectiveAfterText()
         {
-            if (GetCurrentObjective() != null)
+            if (IsInObjective())
             {
-                return GetCurrentObjective().GetCompleteObjectiveAfterText();
+                return objectiveDialogues[currentObjectiveIdx].GetCompleteObjectiveAfterText();
             }
             
             return false;
@@ -220,12 +240,9 @@ namespace DialogueSystem
 
         public string GetDialogue()
         {
-            if (isInvolved)
+            if (IsInObjective())
             {
-                if (GetCurrentObjective()  != null)
-                {
-                    return GetCurrentObjective().GetNewObjectiveDialogue();
-                }
+                return objectiveDialogues[currentObjectiveIdx].GetNewObjectiveDialogue();
             }
             
             return GetRandomDialogue();
@@ -250,7 +267,7 @@ namespace DialogueSystem
             return randomDialogue[randomIndex].text;
         }
 
-        private ObjectiveDialogue GetCurrentObjective()
+        /*private ObjectiveDialogue GetCurrentObjective()
         {
             foreach (ObjectiveDialogue objectiveDialogue in objectiveDialogues)
             {
@@ -261,16 +278,13 @@ namespace DialogueSystem
             }
 
             return null;
-        }
+        }*/
 
         public bool CanRemoveDialogue()
         {
-            if (isInvolved)
+            if (IsInObjective())
             {
-                if (GetCurrentObjective()  != null)
-                {
-                   return !GetCurrentObjective().IsInObjectiveDialogue();
-                }
+               return !objectiveDialogues[currentObjectiveIdx].IsInObjectiveDialogue();
             }
             
             return true;
@@ -285,13 +299,13 @@ namespace DialogueSystem
 
         private void Awake()
         {
-            Interactable.OnInteract += TriggerDialogue;
+            Interactable.OnDialogueInteract += TriggerDialogue;
             dialogueBox.OnContinueDialogue += OnContinueDialogueTriggered;
         }
         
         private void OnDestroy()
         {
-            Interactable.OnInteract -= TriggerDialogue;
+            Interactable.OnDialogueInteract -= TriggerDialogue;
             dialogueBox.OnContinueDialogue -= OnContinueDialogueTriggered;
         }
 
