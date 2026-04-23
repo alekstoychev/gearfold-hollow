@@ -5005,74 +5005,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1001 &1905468798
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6447312821829898614, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
-      propertyPath: m_Name
-      value: ObjectiveManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -59.01841
-      objectReference: {fileID: 0}
-    - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.52236
-      objectReference: {fileID: 0}
-    - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8752461267565267872, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
---- !u!114 &1905468799 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7591590870529042000, guid: c839d8a3f86f54d24be47ac203dcea89, type: 3}
-  m_PrefabInstance: {fileID: 1905468798}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c755f146870f4409aa8abfba4de8aec2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveSystem.ObjectiveManager
 --- !u!1 &1930555529
 GameObject:
   m_ObjectHideFlags: 0
@@ -5624,17 +5556,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 53.66
       objectReference: {fileID: 0}
-    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
-      propertyPath: dialogue.expression1
-      value: 
-      objectReference: {fileID: 4249748869935417780, guid: d944e0cf5cd137b41a808ff868879ce3, type: 3}
-    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
-      propertyPath: dialogue.expression2
-      value: 
-      objectReference: {fileID: 2014652241711141881, guid: d59eb78da54e26f488b4eeb383c5367c, type: 3}
-    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
-      propertyPath: dialogue.speakerName
-      value: Merchant
     - target: {fileID: 5841589520149710020, guid: 4180a2b779680834299e854d5d8f8850, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.6
@@ -5655,16 +5576,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
-      propertyPath: dialogue.randomDialogue.Array.data[0].text
-      value: You looking for some goods?
     - target: {fileID: 5841589520149710020, guid: 4180a2b779680834299e854d5d8f8850, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
-      propertyPath: dialogue.randomDialogue.Array.data[1].text
-      value: I may have something that interests you...
     - target: {fileID: 5841589520149710020, guid: 4180a2b779680834299e854d5d8f8850, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
@@ -5680,6 +5595,26 @@ PrefabInstance:
     - target: {fileID: 6533971095864881291, guid: 4180a2b779680834299e854d5d8f8850, type: 3}
       propertyPath: m_Name
       value: ==Player==
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.expression1
+      value: 
+      objectReference: {fileID: 4249748869935417780, guid: d944e0cf5cd137b41a808ff868879ce3, type: 3}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.expression2
+      value: 
+      objectReference: {fileID: 2014652241711141881, guid: d59eb78da54e26f488b4eeb383c5367c, type: 3}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.speakerName
+      value: Merchant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.randomDialogue.Array.data[0].text
+      value: You looking for some goods?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404020166708346828, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: dialogue.randomDialogue.Array.data[1].text
+      value: I may have something that interests you...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5705,6 +5640,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1596939676}
     m_Modifications:
+    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4282538996201623675, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.3
@@ -5749,6 +5688,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Merchant
       objectReference: {fileID: 0}
+    - target: {fileID: 7277127404800503936, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
+      propertyPath: m_Size.x
+      value: 4.067742
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277127404800503936, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
+      propertyPath: m_Size.y
+      value: 6.216129
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277127404800503936, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5dd280607c7f37b41a0417fe46999d9b, type: 3}
+    - target: {fileID: 7277127404800503936, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8121595439462430391, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
       propertyPath: playerWinIndex
       value: 1
@@ -5757,6 +5712,14 @@ PrefabInstance:
       propertyPath: playerLossIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8121595439462430391, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
+      propertyPath: dialogue.expression1
+      value: 
+      objectReference: {fileID: 21300000, guid: d944e0cf5cd137b41a808ff868879ce3, type: 3}
+    - target: {fileID: 8121595439462430391, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
+      propertyPath: dialogue.expression2
+      value: 
+      objectReference: {fileID: -7153642651963740648, guid: 03cd02006b059bf44a0c3ed1217ec12c, type: 3}
     - target: {fileID: 8121595439462430391, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.size
       value: 10
@@ -5867,7 +5830,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8121595439462430391, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[6].dialogueText.expression
-      value: 1
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8121595439462430391, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
@@ -6438,7 +6400,27 @@ PrefabInstance:
       propertyPath: dialogue.objectiveDialogues.Array.data[3].objectiveDialoguesText.Array.data[1].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 8631847462406747754, guid: 198ba50c2a2834d6f9dca91c491f95f3, type: 3}
+    - target: {fileID: 9018817278753265292, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.47183117
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018817278753265292, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.45021933
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018817278753265292, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018817278753265292, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018817278753265292, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 9018817278753265292, guid: 161a55dccfc2449a5bab50a9117be6a9, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
