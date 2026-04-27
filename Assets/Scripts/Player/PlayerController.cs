@@ -14,6 +14,7 @@ namespace Player
         [Header("Movement")]
         public float moveSpeed = 10.0f;
         public float horizontalDampening;
+        public bool canMove;
 
         [Header("Sprites")] 
         public Sprite walkingRightSprite;
@@ -76,6 +77,8 @@ namespace Player
             {
                 Debug.LogError($"{name} did not find Sprite Renderer component.");
             }
+            
+            canMove = true;
         }
 
         private void OnDestroy()
@@ -91,16 +94,20 @@ namespace Player
         {
             //changing the animation from idle to running when moving
             horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
+            if (!canMove) horizontalMove = 0f;
+            
             animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
             // mirroring the animation when going left. I feel like this might not be optimal but it works
             movement = new Vector2(Input.GetAxis("Horizontal"), 0).normalized;
+            if (!canMove) horizontalMove = 0f;
+            
             bool mirrored = movement.x < 0;
             if (movement.x != 0)
             {
-               this.transform.rotation = Quaternion.Euler(new Vector3(0f, mirrored ? 180f : 0f, 0f));
+                this.transform.rotation = Quaternion.Euler(new Vector3(0f, mirrored ? 180f : 0f, 0f));
             }
-
+            
             Move();
         }
 
@@ -152,6 +159,12 @@ namespace Player
 
         private void Move()
         {
+            if (!canMove)
+            {
+                rb.linearVelocity = Vector2.zero;
+                return;
+            }
+            
             if (moveAction.IsPressed())
             {
                 float inputX = moveAction.ReadValue<Vector2>().x;
