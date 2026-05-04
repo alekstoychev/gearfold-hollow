@@ -161,7 +161,7 @@ namespace DialogueSystem
 
         public bool IsInObjective()
         {
-            return currentObjectiveIdx < objectiveDialogues.Count;
+            return currentObjectiveIdx < objectiveDialogues.Count && objectiveDialogues.Count > 0;
         }
 
         /*public void CompleteObjectiveDialogue()
@@ -252,6 +252,11 @@ namespace DialogueSystem
         
         private string GetRandomDialogue()
         {
+            if (randomDialogue.Count == 1)
+            {
+                return randomDialogue[0].text;    
+            }
+            
             int randomIndex = Random.Range(0, randomDialogue.Count);
             if (randomDialogue.Count > 1)
             {
@@ -301,13 +306,13 @@ namespace DialogueSystem
 
         private void Awake()
         {
-            Interactable.OnDialogueInteract += TriggerDialogue;
+            InteractableNPC.OnDialogueInteract += TriggerDialogue;
             dialogueBox.OnContinueDialogue += OnContinueDialogueTriggered;
         }
         
         private void OnDestroy()
         {
-            Interactable.OnDialogueInteract -= TriggerDialogue;
+            InteractableNPC.OnDialogueInteract -= TriggerDialogue;
             dialogueBox.OnContinueDialogue -= OnContinueDialogueTriggered;
         }
 

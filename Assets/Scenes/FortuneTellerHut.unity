@@ -322,7 +322,7 @@ PrefabInstance:
     - target: {fileID: 7642006158897337008, guid: a16b7d4ef489d4b9e8d895455e030498, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5897a5b9704914b239fc854f52d971a0, type: 3}
+      objectReference: {fileID: 21300000, guid: 37e13235b9b334813a6f72e7b0406798, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -594,7 +594,7 @@ PrefabInstance:
     - target: {fileID: 716548752700747980, guid: e84d4320fedb2442e9cfe26f9f9a68c0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5897a5b9704914b239fc854f52d971a0, type: 3}
+      objectReference: {fileID: 21300000, guid: 82bf63e931c494f86aa09b0f9993124a, type: 3}
     - target: {fileID: 3214157473045005828, guid: e84d4320fedb2442e9cfe26f9f9a68c0, type: 3}
       propertyPath: m_Name
       value: Card The Rat
@@ -897,7 +897,7 @@ PrefabInstance:
     - target: {fileID: 3837755413373754508, guid: 753d05817651a425dbdf5e80effdf84a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5897a5b9704914b239fc854f52d971a0, type: 3}
+      objectReference: {fileID: 21300000, guid: f736da457a2ad4c62b2d5a48b0c6d656, type: 3}
     - target: {fileID: 6178492545047086071, guid: 753d05817651a425dbdf5e80effdf84a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8502711076842182791, guid: 2118c9cee77c24f81adff28044847570, type: 3}
+  m_Sprite: {fileID: 4643803581277412914, guid: 313f4b5e8dbad41c88fcf54cfc9b96a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1291,7 +1291,7 @@ PrefabInstance:
     - target: {fileID: 6921409670343504072, guid: 7365b86d63f714567be6fc412a339791, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5897a5b9704914b239fc854f52d971a0, type: 3}
+      objectReference: {fileID: 21300000, guid: 49fcc4778254141aa8fd18c9e99161cf, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1426,7 +1426,7 @@ PrefabInstance:
     - target: {fileID: 5443057409951730147, guid: 283b34839dce548fbb7e8a3c0f2b657f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5897a5b9704914b239fc854f52d971a0, type: 3}
+      objectReference: {fileID: 21300000, guid: bbbab5adc3e0a49c2bd42f2f00eda9bb, type: 3}
     - target: {fileID: 7990183547279441707, guid: 283b34839dce548fbb7e8a3c0f2b657f, type: 3}
       propertyPath: m_Name
       value: Card Magician
@@ -1645,7 +1645,7 @@ PrefabInstance:
     - target: {fileID: 5152933125965496096, guid: 46a98274621bd4b4a9122d6ecc8108b3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5897a5b9704914b239fc854f52d971a0, type: 3}
+      objectReference: {fileID: 21300000, guid: 1eadae257db654f2eb389f1e34626455, type: 3}
     - target: {fileID: 7127420413130164712, guid: 46a98274621bd4b4a9122d6ecc8108b3, type: 3}
       propertyPath: m_Name
       value: Card King of Swords
@@ -2123,7 +2123,7 @@ PrefabInstance:
     - target: {fileID: 8085714778352196390, guid: 98b4a17eed6a24462be2de31a93ec79d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5897a5b9704914b239fc854f52d971a0, type: 3}
+      objectReference: {fileID: 21300000, guid: aad9bef44650a4789a4591f06ab5364f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2339,7 +2339,7 @@ PrefabInstance:
     - target: {fileID: 4524915756457022390, guid: 1048a0f1addcf44aab9f3dcce0382c87, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5897a5b9704914b239fc854f52d971a0, type: 3}
+      objectReference: {fileID: 21300000, guid: c71a3ad647d74402abe95ee865fcfd6c, type: 3}
     - target: {fileID: 5919625567057602479, guid: 1048a0f1addcf44aab9f3dcce0382c87, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2658,7 +2658,7 @@ PrefabInstance:
     - target: {fileID: 7582609476283541247, guid: 07b68a2c3b56e465bb187e6930ba5224, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5897a5b9704914b239fc854f52d971a0, type: 3}
+      objectReference: {fileID: 21300000, guid: 697eec1db3b4443ce861b04be860bb17, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3011,7 +3011,7 @@ PrefabInstance:
     - target: {fileID: 2934559956877938127, guid: 677ec434914ac47cb8d9bfa4529e6c5c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a1e6456e00cbe465e8f8e6e9a378a849, type: 3}
+      objectReference: {fileID: -4253556394682368428, guid: ec1e4119574104ddf9b2b593cbd8cfbf, type: 3}
     - target: {fileID: 2934559956877938127, guid: 677ec434914ac47cb8d9bfa4529e6c5c, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3069,12 +3069,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8279119400052694414, guid: 677ec434914ac47cb8d9bfa4529e6c5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279119400052694414, guid: 677ec434914ac47cb8d9bfa4529e6c5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279119400052694414, guid: 677ec434914ac47cb8d9bfa4529e6c5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279119400052694414, guid: 677ec434914ac47cb8d9bfa4529e6c5c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8279119400052694414, guid: 677ec434914ac47cb8d9bfa4529e6c5c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279119400052694414, guid: 677ec434914ac47cb8d9bfa4529e6c5c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3100,6 +3116,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65477a24b913e4d62ac27465a4b2433d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.DialogueBox
+--- !u!1001 &1801412695
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2446622948348600523, guid: b45f43ba07c3947a8a1a3f5421588cde, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.576416
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446622948348600523, guid: b45f43ba07c3947a8a1a3f5421588cde, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.755188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446622948348600523, guid: b45f43ba07c3947a8a1a3f5421588cde, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446622948348600523, guid: b45f43ba07c3947a8a1a3f5421588cde, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446622948348600523, guid: b45f43ba07c3947a8a1a3f5421588cde, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446622948348600523, guid: b45f43ba07c3947a8a1a3f5421588cde, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446622948348600523, guid: b45f43ba07c3947a8a1a3f5421588cde, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446622948348600523, guid: b45f43ba07c3947a8a1a3f5421588cde, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446622948348600523, guid: b45f43ba07c3947a8a1a3f5421588cde, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446622948348600523, guid: b45f43ba07c3947a8a1a3f5421588cde, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193097641194176270, guid: b45f43ba07c3947a8a1a3f5421588cde, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b45f43ba07c3947a8a1a3f5421588cde, type: 3}
+--- !u!114 &1801412696 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1188139944706968498, guid: b45f43ba07c3947a8a1a3f5421588cde, type: 3}
+  m_PrefabInstance: {fileID: 1801412695}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c755eee040b41f8b77a0eb56b5b962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Systems.Managers.GameManager
 --- !u!1 &1931980345
 GameObject:
   m_ObjectHideFlags: 0
@@ -3228,11 +3312,11 @@ PrefabInstance:
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
       propertyPath: dialogue.expression1
       value: 
-      objectReference: {fileID: 21300000, guid: a69b4d21e4f4f482fb9ee1d448c65071, type: 3}
+      objectReference: {fileID: 6582335876199942360, guid: afa05611d8a7145cd8f95c1a49e7f395, type: 3}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
       propertyPath: dialogue.expression2
       value: 
-      objectReference: {fileID: 21300000, guid: a1e6456e00cbe465e8f8e6e9a378a849, type: 3}
+      objectReference: {fileID: -4253556394682368428, guid: ec1e4119574104ddf9b2b593cbd8cfbf, type: 3}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
       propertyPath: dialogue.speakerName
       value: Fortune Teller
@@ -3675,7 +3759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3826,6 +3910,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 104397272}
@@ -3974,6 +4066,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2005837465}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1801412696}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1801412696}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -4119,6 +4219,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
@@ -4270,6 +4378,14 @@ PrefabInstance:
       value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_HasTalkedWithFortuneTeller
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetMainStreetSpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: FortuneCardMover, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -4418,6 +4534,14 @@ PrefabInstance:
       value: UnityEngine.Playables.PlayableDirector, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Systems.Managers.GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Systems.Managers.GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[1].objectiveDialoguesText.Array.data[2].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 6
       objectReference: {fileID: 0}
@@ -4506,6 +4630,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[1].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
@@ -4531,6 +4659,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[0].objectiveDialoguesText.Array.data[2].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
@@ -4679,6 +4811,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
       propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386405228631038072, guid: 24396a596f7de406f9899f035ad84115, type: 3}
+      propertyPath: dialogue.objectiveDialogues.Array.data[6].objectiveDialoguesText.Array.data[8].onDialogueContinue.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3662313581301206226, guid: 24396a596f7de406f9899f035ad84115, type: 3}
@@ -4974,3 +5114,4 @@ SceneRoots:
   - {fileID: 2116736118}
   - {fileID: 1931980346}
   - {fileID: 522991810}
+  - {fileID: 1801412695}

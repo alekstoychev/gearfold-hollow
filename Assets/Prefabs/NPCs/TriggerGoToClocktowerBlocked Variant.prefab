@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6648483407288118657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6514548535138172618}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6514548535138172618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6648483407288118657}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6181172243684660864}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &8145314542188381038
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -9222546099820680351, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: textPopup
+      value: 
+      objectReference: {fileID: 6648483407288118657}
+    - target: {fileID: 2652082534747362798, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652082534747362798, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652082534747362798, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652082534747362798, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652082534747362798, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652082534747362798, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652082534747362798, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652082534747362798, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652082534747362798, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652082534747362798, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733552882206368585, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: m_Name
+      value: TriggerGoToClocktowerBlocked Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740675039530772127, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: OnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1466083950225251292}
+    - target: {fileID: 5740675039530772127, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: OnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740675039530772127, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      propertyPath: OnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Interact.InteractableNPC, Assembly-CSharp
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -9222546099820680351, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 7430385957170374317, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2652082534747362798, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6514548535138172618}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2733552882206368585, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1466083950225251292}
+  m_SourcePrefab: {fileID: 100100000, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+--- !u!1 &6117717566045659175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2733552882206368585, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+  m_PrefabInstance: {fileID: 8145314542188381038}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1466083950225251292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6117717566045659175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7172a07295b4af6888ac6ca8e74d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interact.InteractableNPC
+  isInteractable: 1
+  textPopup: {fileID: 6648483407288118657}
+  dialogue:
+    speakerName: 
+    expression1: {fileID: 0}
+    expression2: {fileID: 0}
+    randomDialogue:
+    - text: Maybe I should still check around.
+      expression: 2
+    objectiveDialogues: []
+    currentObjectiveIdx: 0
+--- !u!4 &6181172243684660864 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2652082534747362798, guid: 27679b10187094c31b8414e5f417db10, type: 3}
+  m_PrefabInstance: {fileID: 8145314542188381038}
+  m_PrefabAsset: {fileID: 0}

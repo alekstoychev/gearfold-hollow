@@ -6,7 +6,7 @@ namespace Player
 {
     public class HutController : MonoBehaviour
     {
-        public Interactable fortuneTeller;
+        public InteractableNPC fortuneTeller;
         
         private PlayerInput playerInput;
         private InputAction interactAction;

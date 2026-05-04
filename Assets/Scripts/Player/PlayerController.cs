@@ -41,8 +41,16 @@ namespace Player
         public Animator animator;
         public float horizontalMove = 0f;
         private Vector2 movement; 
+        
+        private float autoDirection = 0f;
+        private bool shouldAutoMove;
 
         #endregion
+
+        public bool CanMove
+        {
+            set => canMove = value;
+        }
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         private void Start()
@@ -95,12 +103,14 @@ namespace Player
             //changing the animation from idle to running when moving
             horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
             if (!canMove) horizontalMove = 0f;
+            if (shouldAutoMove) horizontalMove = autoDirection * moveSpeed;
             
             animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
             // mirroring the animation when going left. I feel like this might not be optimal but it works
             movement = new Vector2(Input.GetAxis("Horizontal"), 0).normalized;
             if (!canMove) horizontalMove = 0f;
+            if (shouldAutoMove) movement.x = autoDirection;
             
             bool mirrored = movement.x < 0;
             if (movement.x != 0)
@@ -108,7 +118,26 @@ namespace Player
                 this.transform.rotation = Quaternion.Euler(new Vector3(0f, mirrored ? 180f : 0f, 0f));
             }
             
-            Move();
+            if (shouldAutoMove)
+            {
+                rb.linearVelocityX = autoDirection *  moveSpeed;
+            }
+            else
+            {
+                Move();
+            }
+        }
+
+        public void MoveToAnotherArea(float direction)
+        {
+            shouldAutoMove = true;
+            autoDirection = direction;
+        }
+
+        public void StopMoveToAnotherArea()
+        {
+            shouldAutoMove = false;
+            autoDirection = 0f;
         }
 
         private void FixedUpdate()
