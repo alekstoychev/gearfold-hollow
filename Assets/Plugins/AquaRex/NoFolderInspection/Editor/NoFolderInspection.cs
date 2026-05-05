@@ -9,33 +9,52 @@ namespace NoFolderInspection
 	[InitializeOnLoad]
 	public class NoFolderInspection
 	{
-		private static Object lastNonFolderSelection;
-		private static bool lockedByScript = false;
-		private const string PREF_KEY = "NoFolderInspection_Enabled";
-		private static bool isEnabled;
+		private static Object _lastNonFolderSelection;
+		private const string _prefKey = "NoFolderInspection_Enabled";
+		private const string _sessionLockedByScriptKey = "NoFolderInspection_LockedByScript";
+		private const int _leftMouseButton = 0;
+		private static bool _isEnabled;
+
+		private static bool LockedByScript
+		{
+			get => SessionState.GetBool(_sessionLockedByScriptKey, false);
+			set => SessionState.SetBool(_sessionLockedByScriptKey, value);
+		}
 
 		static NoFolderInspection()
 		{
-			isEnabled = EditorPrefs.GetBool(PREF_KEY, true);
+			_isEnabled = EditorPrefs.GetBool(_prefKey, true);
 			EditorApplication.projectWindowItemOnGUI += OnProjectWindowItemGUI;
 			Selection.selectionChanged += OnSelectionChanged;
+			EditorApplication.delayCall += ReconcileLockState;
+		}
+
+		private static void ReconcileLockState()
+		{
+			if (!_isEnabled) return;
+			if (LockedByScript && !IsFolder(Selection.activeObject))
+			{
+				LockInspectors(false);
+				LockedByScript = false;
+			}
 		}
 
 		[MenuItem("Tools/No Folder Inspector")]
 		private static void ToggleFeature()
 		{
-			isEnabled = !isEnabled;
-			EditorPrefs.SetBool(PREF_KEY, isEnabled);
-			if (!isEnabled)
+			_isEnabled = !_isEnabled;
+			EditorPrefs.SetBool(_prefKey, _isEnabled);
+			if (!_isEnabled)
 			{
 				LockInspectors(false);
+				LockedByScript = false;
 			}
 		}
 
 		[MenuItem("Tools/No Folder Inspector", true)]
 		private static bool ToggleFeatureValidate()
 		{
-			Menu.SetChecked("Tools/No Folder Inspector", isEnabled);
+			Menu.SetChecked("Tools/No Folder Inspector", _isEnabled);
 			return true;
 		}
 
@@ -60,38 +79,35 @@ namespace NoFolderInspection
 
 		private static void OnProjectWindowItemGUI(string guid, Rect rect)
 		{
-			if (!isEnabled) return;
+			if (!_isEnabled) return;
 			Event e = Event.current;
-			if (e.type == EventType.MouseDown && rect.Contains(e.mousePosition))
+			if (e.type != EventType.MouseDown || e.button != _leftMouseButton) return;
+			if (!rect.Contains(e.mousePosition)) return;
+
+			string path = AssetDatabase.GUIDToAssetPath(guid);
+			if (string.IsNullOrEmpty(path) || !Directory.Exists(path)) return;
+
+			if (LockedByScript || !IsAnyInspectorLockedByUser())
 			{
-				string path = AssetDatabase.GUIDToAssetPath(guid);
-				if (!string.IsNullOrEmpty(path) && Directory.Exists(path))
-				{
-					// Only lock if not already locked by user
-					if (!IsAnyInspectorLockedByUser())
-					{
-						LockInspectors(true);
-						lockedByScript = true;
-					}
-				}
+				LockInspectors(true);
+				LockedByScript = true;
 			}
 		}
 
-		   private static void OnSelectionChanged()
-		   {
-			   if (!isEnabled) return;
+		private static void OnSelectionChanged()
+		{
+			if (!_isEnabled) return;
 
-			   Object currentSelection = Selection.activeObject;
-			   if (currentSelection != null && !IsFolder(currentSelection))
-			   {
-				   if (lockedByScript)
-				   {
-					   LockInspectors(false);
-					   lockedByScript = false;
-				   }
-				   lastNonFolderSelection = currentSelection;
-			   }
-		   }
+			Object currentSelection = Selection.activeObject;
+			if (currentSelection == null || IsFolder(currentSelection)) return;
+
+			if (LockedByScript)
+			{
+				LockInspectors(false);
+				LockedByScript = false;
+			}
+			_lastNonFolderSelection = currentSelection;
+		}
 
 		private static void LockInspectors(bool lockState)
 		{

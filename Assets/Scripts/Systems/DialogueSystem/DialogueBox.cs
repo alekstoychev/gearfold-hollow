@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using Interact;
+using Player;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace DialogueSystem
@@ -62,24 +64,45 @@ namespace DialogueSystem
             dialogueBoxBackground.enabled = false;
             speakerTitleBox.enabled = false;
             speakerTextBox.enabled = false;
-            speakerImage.enabled = false;
-            speakerImage.sprite = null;
+
+            if (SceneManager.GetActiveScene().name != "FortuneTellerHut")
+            {
+                speakerImage.enabled = false;
+                speakerImage.sprite = null;
+            }
             
             doTypeWriter = false;
             
             //unityevent complete
             
-            currentDialogue.TriggerEndOfDialogue();
             if (currentDialogue.GetCompleteObjectiveAfterText())
             {
+                currentDialogue.TriggerEndOfDialogue();
+                
+                if (SceneManager.GetActiveScene().name != "FortuneTellerHut")
+                {
+                    PlayerController player1 = FindFirstObjectByType<PlayerController>();
+                    player1.canMove = true;
+                }
+
                 return;
             }
+            
+            currentDialogue.TriggerEndOfDialogue();
 
             if (currentDialogue.IsInObjective())
             {
                 canContinueDialogue = false;
                 StartCoroutine(ShowDialogueAfterDelay());
+                return;
             }
+
+            if (SceneManager.GetActiveScene().name != "FortuneTellerHut")
+            {
+                PlayerController player = FindFirstObjectByType<PlayerController>();
+                player.canMove = true;
+            }
+        
             
             /*
             Debug.Log($"Checking continue after dialogue {currentDialogue.GetContinueAfterText()}, {currentDialogue.GetWaitTimeAfterText()}");
@@ -89,6 +112,21 @@ namespace DialogueSystem
                 StartCoroutine(ShowDialogueAfterDelay());
                 Debug.Log($"Activating Coroutine.");
             }*/
+        }
+
+        public bool TryHideDialogueBox()
+        {
+            if (doTypeWriter)
+            {
+                speakerTextBox.text += fullDialogue;
+                doTypeWriter = false;
+                currentTypewriterTimer = 0;
+
+                return false;
+            }
+            
+            HideDialogueBox();
+            return true;
         }
 
         private void Update()

@@ -49,31 +49,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardGame.CardDeck
   defaultCards:
-  - prefab: {fileID: 348756493091630368, guid: dcfcdaeba1d85429a9cf59dc7470005e, type: 3}
-    cardType: 1
-  - prefab: {fileID: 2970826434288324966, guid: 23ca8c6e37ce74f379070906a09a214e, type: 3}
-    cardType: 2
-  - prefab: {fileID: 3033630816145530046, guid: c124cea3c32344c349697cd2f2ebdfa1, type: 3}
-    cardType: 3
-  - prefab: {fileID: 7200257072147295719, guid: 2d7545c31bb1c4ef5a3c7e450d7b6bd7, type: 3}
-    cardType: 4
-  - prefab: {fileID: 1308724093812077240, guid: 1ff791523dc414a18acf216c78e594d5, type: 3}
+  - prefab: {fileID: 5721425744766542968, guid: a16b7d4ef489d4b9e8d895455e030498, type: 3}
+    cardType: 6
+  - prefab: {fileID: 5000828568972740096, guid: 7365b86d63f714567be6fc412a339791, type: 3}
     cardType: 5
-  - prefab: {fileID: 1308724093812077240, guid: 1ff791523dc414a18acf216c78e594d5, type: 3}
-    cardType: 5
-  - prefab: {fileID: 7200257072147295719, guid: 2d7545c31bb1c4ef5a3c7e450d7b6bd7, type: 3}
-    cardType: 4
-  - prefab: {fileID: 3033630816145530046, guid: c124cea3c32344c349697cd2f2ebdfa1, type: 3}
-    cardType: 3
-  - prefab: {fileID: 2970826434288324966, guid: 23ca8c6e37ce74f379070906a09a214e, type: 3}
+  - prefab: {fileID: 7127420413130164712, guid: 46a98274621bd4b4a9122d6ecc8108b3, type: 3}
     cardType: 2
-  - prefab: {fileID: 348756493091630368, guid: dcfcdaeba1d85429a9cf59dc7470005e, type: 3}
+  - prefab: {fileID: 7990183547279441707, guid: 283b34839dce548fbb7e8a3c0f2b657f, type: 3}
     cardType: 1
+  - prefab: {fileID: 5499349651303551031, guid: 07b68a2c3b56e465bb187e6930ba5224, type: 3}
+    cardType: 3
+  - prefab: {fileID: 6151196611083431406, guid: 98b4a17eed6a24462be2de31a93ec79d, type: 3}
+    cardType: 9
+  - prefab: {fileID: 3214157473045005828, guid: e84d4320fedb2442e9cfe26f9f9a68c0, type: 3}
+    cardType: 7
+  - prefab: {fileID: 1164523882435078724, guid: 753d05817651a425dbdf5e80effdf84a, type: 3}
+    cardType: 8
+  - prefab: {fileID: 1990855545217197438, guid: 1048a0f1addcf44aab9f3dcce0382c87, type: 3}
+    cardType: 4
   cardHand: {fileID: 0}
   defaultCardCount: 5
   hand: {fileID: 0}
   defaultPosition: {fileID: 0}
   fakeCardPrefab: {fileID: 3660608392902437012, guid: 1ef236ea584764300ae07943eb3a0d62, type: 3}
   fakeCardOffset: 20
-  animationTime: 0.8
-  moveSpeed: 4
+  animationTime: 1
+  moveSpeed: 5

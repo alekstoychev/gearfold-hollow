@@ -1,0 +1,975 @@
+fileFormatVersion: 2
+guid: 1cb8fb44ac87e48bf9e930150e72bf80
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5695188034893528629
+    second: mainroadback_0
+  - first:
+      213: 6079622333120740841
+    second: mainroadback_1
+  - first:
+      213: 4547276688941084910
+    second: mainroadback_2
+  - first:
+      213: -3906525873482939826
+    second: mainroadback_3
+  - first:
+      213: 4191593857472973339
+    second: mainroadback_4
+  - first:
+      213: -4371620462487206929
+    second: mainroadback_5
+  - first:
+      213: -489376989176663717
+    second: mainroadback_6
+  - first:
+      213: -8296922853540701343
+    second: mainroadback_7
+  - first:
+      213: 6701890379792911097
+    second: mainroadback_8
+  - first:
+      213: -4901400082530670097
+    second: mainroadback_9
+  - first:
+      213: -7464259472130995128
+    second: mainroadback_10
+  - first:
+      213: 5692385991031108685
+    second: mainroadback_11
+  - first:
+      213: 8356928007951532083
+    second: mainroadback_12
+  - first:
+      213: -8638719776852845876
+    second: mainroadback_13
+  - first:
+      213: 1733851847569875226
+    second: mainroadback_14
+  - first:
+      213: -6573976214955386631
+    second: mainroadback_15
+  - first:
+      213: -1579289337992005152
+    second: mainroadback_16
+  - first:
+      213: 4719912866906753848
+    second: mainroadback_17
+  - first:
+      213: 7371881395779769299
+    second: mainroadback_18
+  - first:
+      213: 8148148313643178273
+    second: mainroadback_19
+  - first:
+      213: -3102715193736430754
+    second: mainroadback_20
+  - first:
+      213: 6839145009193715923
+    second: mainroadback_21
+  - first:
+      213: 8171163378459675876
+    second: mainroadback_22
+  - first:
+      213: -6232215480422957479
+    second: mainroadback_23
+  - first:
+      213: 5924391299472601313
+    second: mainroadback_24
+  - first:
+      213: 7052579460577158225
+    second: mainroadback_25
+  - first:
+      213: -6936020653104754141
+    second: mainroadback_26
+  - first:
+      213: -8147945100698107962
+    second: mainroadback_27
+  - first:
+      213: 8139541324743405555
+    second: mainroadback_28
+  - first:
+      213: 226198186386649079
+    second: mainroadback_29
+  - first:
+      213: -2990383514511232681
+    second: mainroadback_30
+  - first:
+      213: 7787459909728256892
+    second: mainroadback_31
+  - first:
+      213: -220283682822111763
+    second: mainroadback_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mainroadback_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 203
+        width: 4096
+        height: 1511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1cd1b18a0a6f0b0800000000000000
+      internalID: -5695188034893528629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 255
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed713efc482f5450800000000000000
+      internalID: 6079622333120740841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 221
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee07fbb5e0c2b1f30800000000000000
+      internalID: 4547276688941084910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 226
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e424d2d6a6b39c9c0800000000000000
+      internalID: -3906525873482939826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_4
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 218
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ac265c7688b2a30800000000000000
+      internalID: 4191593857472973339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_5
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 252
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe30f98e952e453c0800000000000000
+      internalID: -4371620462487206929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 250
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b51ffde98326539f0800000000000000
+      internalID: -489376989176663717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_7
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 248
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16bd2e9af986bdc80800000000000000
+      internalID: -8296922853540701343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_8
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 251
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fa0a23dac5e10d50800000000000000
+      internalID: 6701890379792911097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_9
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 245
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe960baf79abafbb0800000000000000
+      internalID: -4901400082530670097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_10
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 245
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c8944be8f996890800000000000000
+      internalID: -7464259472130995128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_11
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 221
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d44b1d736ea6ffe40800000000000000
+      internalID: 5692385991031108685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_12
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 300
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 330c67f0fb5c9f370800000000000000
+      internalID: 8356928007951532083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_13
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 303
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca5b82022a1d1880800000000000000
+      internalID: -8638719776852845876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_14
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 259
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11ae8ba111ef0810800000000000000
+      internalID: 1733851847569875226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_15
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 301
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f897b1867b84c4a0800000000000000
+      internalID: -6573976214955386631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_16
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 304
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9bc6be6bc351ae0800000000000000
+      internalID: -1579289337992005152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_17
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 288
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83bc5cacebf708140800000000000000
+      internalID: 4719912866906753848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_18
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 292
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d393c1521f2e4660800000000000000
+      internalID: 7371881395779769299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_19
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 221
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12956e378b9041170800000000000000
+      internalID: 8148148313643178273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_20
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 286
+        width: 78
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5bf12e58f0f0f4d0800000000000000
+      internalID: -3102715193736430754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_21
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 241
+        width: 71
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d88068862689ee50800000000000000
+      internalID: 6839145009193715923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_22
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 221
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ec05cecccdc56170800000000000000
+      internalID: 8171163378459675876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_23
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 218
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ef2bd4a09b289a0800000000000000
+      internalID: -6232215480422957479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_24
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 216
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e0ba738f7aa73250800000000000000
+      internalID: 5924391299472601313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_25
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 154eae937abcfd160800000000000000
+      internalID: 7052579460577158225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_26
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 212
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3221be0f6fd4ebf90800000000000000
+      internalID: -6936020653104754141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_27
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 212
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cf318fb91facee80800000000000000
+      internalID: -8147945100698107962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_28
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 241
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff61ffa5b575f070800000000000000
+      internalID: 8139541324743405555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_29
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 221
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ffe9645d0e932300800000000000000
+      internalID: 226198186386649079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_30
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 240
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751bf5b89060086d0800000000000000
+      internalID: -2990383514511232681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_31
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 292
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73c2f5378d921c60800000000000000
+      internalID: 7787459909728256892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainroadback_32
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 177
+        width: 31
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dedb297582561fcf0800000000000000
+      internalID: -220283682822111763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mainroadback_0: -5695188034893528629
+      mainroadback_1: 6079622333120740841
+      mainroadback_10: -7464259472130995128
+      mainroadback_11: 5692385991031108685
+      mainroadback_12: 8356928007951532083
+      mainroadback_13: -8638719776852845876
+      mainroadback_14: 1733851847569875226
+      mainroadback_15: -6573976214955386631
+      mainroadback_16: -1579289337992005152
+      mainroadback_17: 4719912866906753848
+      mainroadback_18: 7371881395779769299
+      mainroadback_19: 8148148313643178273
+      mainroadback_2: 4547276688941084910
+      mainroadback_20: -3102715193736430754
+      mainroadback_21: 6839145009193715923
+      mainroadback_22: 8171163378459675876
+      mainroadback_23: -6232215480422957479
+      mainroadback_24: 5924391299472601313
+      mainroadback_25: 7052579460577158225
+      mainroadback_26: -6936020653104754141
+      mainroadback_27: -8147945100698107962
+      mainroadback_28: 8139541324743405555
+      mainroadback_29: 226198186386649079
+      mainroadback_3: -3906525873482939826
+      mainroadback_30: -2990383514511232681
+      mainroadback_31: 7787459909728256892
+      mainroadback_32: -220283682822111763
+      mainroadback_4: 4191593857472973339
+      mainroadback_5: -4371620462487206929
+      mainroadback_6: -489376989176663717
+      mainroadback_7: -8296922853540701343
+      mainroadback_8: 6701890379792911097
+      mainroadback_9: -4901400082530670097
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,11 +10,15 @@ namespace CardGame
     public enum CardType
     {
         BackSide,
-        Type1,
-        Type2,
-        Type3,
-        Type4,
-        Type5
+        Magician,
+        KingOfSwords,
+        TheFool,
+        WheelOfFortune,
+        Justice,
+        Death,
+        TheRat,
+        TheTower,
+        TheMoon
     }
     
     public class CardObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler

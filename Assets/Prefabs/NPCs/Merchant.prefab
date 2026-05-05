@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.08, y: 1.45, z: 0}
-  m_LocalScale: {x: 0.21, y: 0.21, z: 0.21}
+  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4282538996201623675}
@@ -81,12 +81,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 84a9b28c57ba35b4cb6d04a80aa6c9d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1bc90dede03592f4aaee569717e48e1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.741667, y: 18.002401}
+  m_Size: {x: 9.49, y: 10.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -191,7 +191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4282538996201623675}
-  - component: {fileID: 8121595439462430391}
+  - component: {fileID: 2576155007302815467}
   - component: {fileID: 7251864064322095062}
   m_Layer: 0
   m_Name: Merchant
@@ -208,7 +208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4496687567073895488}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.3, y: 21.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -217,7 +217,7 @@ Transform:
   - {fileID: 5991975405446025206}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8121595439462430391
+--- !u!114 &2576155007302815467
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,16 +226,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4496687567073895488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf7172a07295b4af6888ac6ca8e74d1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 69f3f2baa959f4f0888b9ab6a993ad3f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  m_EditorClassIdentifier: Assembly-CSharp::Interact.Merchant
   isInteractable: 1
-  interactableType: 0
   textPopup: {fileID: 3120704830573924689}
   dialogue:
     speakerName: Merchant
-    expression1: {fileID: -2130589401343625317, guid: e1cb955bed2274c56a6d1b23569c0527, type: 3}
-    expression2: {fileID: -1841651273980143786, guid: 8d547605ec9534b0cbec997374504b27, type: 3}
+    expression1: {fileID: -8871532131567578648, guid: 8681579eb1cfc6c45bcb311143622265, type: 3}
+    expression2: {fileID: -7153642651963740648, guid: 03cd02006b059bf44a0c3ed1217ec12c, type: 3}
     randomDialogue:
     - text: Hiiiiii!!!!
       expression: 0
@@ -253,9 +252,35 @@ MonoBehaviour:
       objectiveDialoguesText:
       - dialogueText:
           text: "Hey there, buddy! You don\u2019t look like you\u2019re from this
-            town. Here for the carnival? I\u2019ve got a lot of stuff you might be
-            interested in. You would need to have something to exchange it for, though."
+            town. "
           expression: 0
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      - dialogueText:
+          text: "Here for the carnival? I\u2019ve got a lot of stuff you might be
+            interested in. "
+          expression: 1
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls: []
+      - dialogueText:
+          text: You would need to have something to exchange it for, though.
+          expression: 1
         completeObjectiveAfterText: 0
         onDialogueContinue:
           m_PersistentCalls:
@@ -270,7 +295,7 @@ MonoBehaviour:
       - dialogueText:
           text: "A pretty, shiny thing now, ain\u2019t it? Sorry to say but I don\u2019t
             think that\u2019s working. Not for sale, I assume? Should've guessed."
-          expression: 1
+          expression: 0
         completeObjectiveAfterText: 0
         onDialogueContinue:
           m_PersistentCalls:
@@ -297,7 +322,7 @@ MonoBehaviour:
           text: "Ah, ah, ah! I said free, not as a gift. I\u2019ll make you an offer,
             right? Let\u2019s play a game of cards and if you win, I give you the
             lantern."
-          expression: 1
+          expression: 0
         completeObjectiveAfterText: 0
         onDialogueContinue:
           m_PersistentCalls:
@@ -335,14 +360,33 @@ MonoBehaviour:
       randomDialogue: []
       objectiveDialoguesText:
       - dialogueText:
-          text: "Ooh, well done.You ain\u2019t as sloppy with your cards as you look.
-            I\u2019m not a sore loser, so here. As the deal goes."
+          text: "Ooh, well done. You ain\u2019t as sloppy with your cards as you
+            look. "
           expression: 1
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      - dialogueText:
+          text: "I\u2019m not a sore loser, so here. As the deal goes."
+          expression: 0
         completeObjectiveAfterText: 1
         onDialogueContinue:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 8121595439462430391}
+            - m_Target: {fileID: 0}
               m_TargetAssemblyTypeName: Interact.Interactable, Assembly-CSharp
               m_MethodName: SetObjectiveIndex
               m_Mode: 3
@@ -354,7 +398,7 @@ MonoBehaviour:
                 m_StringArgument: 
                 m_BoolArgument: 0
               m_CallState: 2
-            - m_Target: {fileID: 8121595439462430391}
+            - m_Target: {fileID: 0}
               m_TargetAssemblyTypeName: Interact.Interactable, Assembly-CSharp
               m_MethodName: Interact
               m_Mode: 1
@@ -383,15 +427,52 @@ MonoBehaviour:
       objectiveDialoguesText:
       - dialogueText:
           text: "Oh, too bad! Don\u2019t be too bummed out about it, I\u2019m a tough
-            opponent to beat. But hey, here\u2019s the lantern, I\u2019m a man of
-            my word. You\u2019d better learn how to play cards if you wanna get anywhere
-            in this town, though."
+            opponent to beat. "
           expression: 0
-        completeObjectiveAfterText: 1
+        completeObjectiveAfterText: 0
         onDialogueContinue:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 8121595439462430391}
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_MethodName: SetActive
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      - dialogueText:
+          text: "But hey, here\u2019s the lantern, I\u2019m a man of my word.  "
+          expression: 0
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 0}
+              m_TargetAssemblyTypeName: Player.PlayerController, Assembly-CSharp
+              m_MethodName: Lantern
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      - dialogueText:
+          text: "You\u2019d better learn how to play cards if you wanna get anywhere
+            in this town, though."
+          expression: 0
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 0}
               m_TargetAssemblyTypeName: Interact.Interactable, Assembly-CSharp
               m_MethodName: ProgressDialogueObjective
               m_Mode: 1
@@ -403,21 +484,9 @@ MonoBehaviour:
                 m_StringArgument: 
                 m_BoolArgument: 0
               m_CallState: 2
-            - m_Target: {fileID: 8121595439462430391}
+            - m_Target: {fileID: 0}
               m_TargetAssemblyTypeName: Interact.Interactable, Assembly-CSharp
               m_MethodName: Interact
-              m_Mode: 1
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 0
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
-            - m_Target: {fileID: 0}
-              m_TargetAssemblyTypeName: Player.PlayerController, Assembly-CSharp
-              m_MethodName: Lantern
               m_Mode: 1
               m_Arguments:
                 m_ObjectArgument: {fileID: 0}
@@ -432,14 +501,20 @@ MonoBehaviour:
       objectiveDialoguesText:
       - dialogueText:
           text: "Now go have fun lad! The carnival is thriving, there\u2019s a lot
-            of fun to be had and the night is still young. And if you need to purchase
-            anything, you know where to find me."
+            of fun to be had and the night is still young. "
           expression: 1
+        completeObjectiveAfterText: 0
+        onDialogueContinue:
+          m_PersistentCalls:
+            m_Calls: []
+      - dialogueText:
+          text: And if you need to purchase anything, you know where to find me.
+          expression: 0
         completeObjectiveAfterText: 1
         onDialogueContinue:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 8121595439462430391}
+            - m_Target: {fileID: 0}
               m_TargetAssemblyTypeName: Interact.Interactable, Assembly-CSharp
               m_MethodName: ProgressDialogueObjective
               m_Mode: 1
@@ -452,9 +527,8 @@ MonoBehaviour:
                 m_BoolArgument: 0
               m_CallState: 2
     currentObjectiveIdx: 0
-  OnEnterPlace:
-    m_PersistentCalls:
-      m_Calls: []
+  playerWinDialogueIndex: -1
+  playerLossDialogueIndex: -1
 --- !u!61 &7251864064322095062
 BoxCollider2D:
   m_ObjectHideFlags: 0

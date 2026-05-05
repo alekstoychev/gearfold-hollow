@@ -24,18 +24,22 @@ namespace CardGame
     public class HandManager : MonoBehaviour
     {
         [Header("Layout")]
-        [SerializeField] private Vector2 arcCenter;
-        [SerializeField] private float arcRadius;
-        [SerializeField] private float middleAngle;
-        [SerializeField] private float angleSpread;
+        [SerializeField] protected Vector2 arcCenter;
+        [SerializeField] protected float arcRadius;
+        [SerializeField] protected float middleAngle;
+        [SerializeField] protected float angleSpread;
+        [SerializeField] private float pushOffset;
+        [SerializeField] private float endCardMultiplier;
+        [SerializeField] private Vector2 disabledDeckPosOffset;
+        [SerializeField] private float disabledDeckOffset;
 
         [Header("Hover offset")] 
-        [SerializeField] private float hoverOffset;
-        [SerializeField] private float selectOffset;
+        [SerializeField] protected float hoverOffset;
+        [SerializeField] protected float selectOffset;
 
         [Header("Animation")] 
-        [SerializeField] private float moveDuration;
-        [SerializeField] private AnimationCurve moveCurve;
+        [SerializeField] protected float moveDuration;
+        [SerializeField] protected AnimationCurve moveCurve;
         
         [Header("Playing cards")]
         [SerializeField] private RectTransform playingCardPosition;
@@ -108,12 +112,13 @@ namespace CardGame
         }
 #endif
         
-        private List<CardObject> cards = new List<CardObject>();
-        private List<Coroutine> moveCoroutines = new List<Coroutine>();
+        protected List<CardObject> cards = new List<CardObject>();
+        protected List<Coroutine> moveCoroutines = new List<Coroutine>();
+        protected int hoveredCardIndex = -1;
+        protected int selectedCardIndex = -1;
+        protected bool isCardBeingPlayed;
+        
         private bool isZoneHovered;
-        private int hoveredCardIndex = -1;
-        private int selectedCardIndex = -1;
-        private bool isCardBeingPlayed;
 
         public Action onLostAllCards;
 
@@ -137,7 +142,7 @@ namespace CardGame
             ActivateAllCards();
         }
 
-        public void AddCard(CardObject newCard)
+        public virtual void AddCard(CardObject newCard)
         {
             newCard.SetManager(this);
             newCard.SetIndex(cards.Count);
@@ -189,7 +194,7 @@ namespace CardGame
             UpdateAllCards();
         }
 
-        public void SetCardHovered(int cardIndex, bool isActive)
+        public virtual void SetCardHovered(int cardIndex, bool isActive)
         {
             if (isCardBeingPlayed) return;
             if (cardIndex < 0 || cardIndex >= cards.Count) return;
@@ -202,7 +207,7 @@ namespace CardGame
             UpdateAllCards();
         }
 
-        public void OnCardSelect(int cardIndex)
+        public virtual void OnCardSelect(int cardIndex)
         {
             selectedCardIndex = cardIndex;
             isZoneHovered = false;
@@ -232,7 +237,7 @@ namespace CardGame
             }
         }
 
-        private void DeactivateAllCards()
+        public virtual void DeactivateAllCards()
         {
             foreach (CardObject card in cards)
             {
@@ -240,7 +245,7 @@ namespace CardGame
             }
         }
 
-        private void ActivateAllCards()
+        public virtual void ActivateAllCards()
         {
             foreach (CardObject card in cards)
             {
@@ -248,7 +253,7 @@ namespace CardGame
             }
         }
 
-        private void UpdateAllCards()
+        public virtual void UpdateAllCards()
         {
             int cardsAmount = cards.Count;
             if (cardsAmount <= 0) return;
@@ -265,7 +270,36 @@ namespace CardGame
                 }
                 
                 float value = cardsAmount > 1 ? (float)i / (cards.Count - 1) : 0.5f;
-                float angleDeg = Mathf.Lerp(startAngle, endAngle, value);
+                
+                float finalStartAngle = startAngle;
+                float finalEndAngle = endAngle;
+                if (hoveredCardIndex != -1)
+                {
+                    if (hoveredCardIndex == i - 1)
+                    {
+                        if (i == cards.Count - 1)
+                        {            
+                            finalEndAngle = middleAngle + halfGaps * (angleSpread + pushOffset * endCardMultiplier);
+                        }
+                        else
+                        {
+                            value += pushOffset;
+                        }
+                    }
+                    else if (hoveredCardIndex == i + 1)
+                    {
+                        if (i == 0)
+                        {
+                            finalStartAngle = middleAngle - halfGaps * (angleSpread +  pushOffset * endCardMultiplier);
+                        }
+                        else
+                        {
+                            value -= pushOffset;
+                        }
+                    }
+                }
+                
+                float angleDeg = Mathf.Lerp(finalStartAngle, finalEndAngle, value);
                 float angleRad = angleDeg * Mathf.Deg2Rad;
                 
                 Vector2 direction = new  Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
@@ -275,12 +309,18 @@ namespace CardGame
                 Vector2 targetPosition;
                 Quaternion targetRotation = baseRotation; 
                 
+                
                 if (i == hoveredCardIndex)
                 {
                     targetPosition = basePosition + direction * selectOffset;
                 }
                 else if (isZoneHovered)
                 {
+                    targetPosition = basePosition + direction * hoverOffset;
+                }
+                else if (isCardBeingPlayed)
+                {
+                    basePosition = (arcCenter - disabledDeckPosOffset) + direction * (arcRadius - disabledDeckOffset);
                     targetPosition = basePosition + direction * hoverOffset;
                 }
                 else
@@ -294,7 +334,7 @@ namespace CardGame
             }
         }
 
-        private IEnumerator MoveCard(RectTransform rectTransform, Vector2 targetPosition, Quaternion targetRotation, Vector3 targetScale, int cardIndex, bool isSelected = false)
+        protected virtual IEnumerator MoveCard(RectTransform rectTransform, Vector2 targetPosition, Quaternion targetRotation, Vector3 targetScale, int cardIndex, bool isSelected = false)
         {
             Vector2 startPos = rectTransform.anchoredPosition;
             Quaternion startRot = rectTransform.rotation;

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Interact;
+using Systems.Managers;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -69,7 +70,8 @@ namespace CardGame
             
             yield return new WaitForSeconds(1f);
 
-            SceneManager.sceneLoaded += OnPlayerWinLoad;
+            GameManager.Instance.PlayerWinTutorialCards();
+            GameManager.Instance.SetMainStreetSpawnPoint(GameManager.MainStreetSpawnPoint.MerchantCards);
             onPlayerWinGame.Invoke();
         }
 
@@ -84,7 +86,8 @@ namespace CardGame
             
             yield return new WaitForSeconds(1f);
             
-            SceneManager.sceneLoaded -= OnPlayerLoseLoad;
+            GameManager.Instance.PlayerLoseTutorialCards();
+            GameManager.Instance.SetMainStreetSpawnPoint(GameManager.MainStreetSpawnPoint.MerchantCards);
             onPlayerLoseGame.Invoke();
         }
         
@@ -315,28 +318,6 @@ namespace CardGame
         {
             button.SetActive(active);
             button.GetComponent<Button>().interactable = active;
-        }
-
-        private void OnPlayerWinLoad(Scene scene, LoadSceneMode mode)
-        {
-            Interactable merchant = GameObject.Find("Merchant").GetComponent<Interactable>();
-            merchant.hasPlayedCards = true;
-            merchant.hasWonCards = true;
-            
-            Debug.Log("Merchant has been informed about the player's win.");
-            
-            SceneManager.sceneLoaded -= OnPlayerWinLoad;
-        }
-
-        private void OnPlayerLoseLoad(Scene scene, LoadSceneMode mode)
-        {
-            Interactable merchant = GameObject.Find("Merchant").GetComponent<Interactable>();
-            merchant.hasPlayedCards = true;
-            merchant.hasWonCards = false;
-            
-            Debug.Log("Merchant has been informed about the player's loss.");
-            
-            SceneManager.sceneLoaded -= OnPlayerLoseLoad;
         }
     }
 }
