@@ -274,8 +274,25 @@ namespace CardGame
                 StartCoroutine(aiPlayer.PickACard());
                 return;
             }
-            
-            BeginRockPaperScissors();
+
+            if (aiCard.Damage == 0 && playerCard.Damage != 0)
+            {
+                StartCoroutine(ContinueCombat(playerCard, playerAnimator, aiCard, opponentAnimator));
+            }
+            else if (aiCard.Damage != 0 && playerCard.Damage == 0)
+            {
+                StartCoroutine(ContinueCombat(aiCard, opponentAnimator, playerCard, playerAnimator));
+            }
+            else if (aiCard.Damage != 0 && playerCard.Damage != 0)
+            {
+                BeginRockPaperScissors();
+            }
+            else
+            {
+                aiCard.TakeDamage(1000);
+                playerCard.TakeDamage(1000);
+                CheckCombatComplete();
+            }
         }
 
         private void GetAIChoice()

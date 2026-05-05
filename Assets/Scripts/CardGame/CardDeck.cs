@@ -27,6 +27,8 @@ namespace CardGame
         [SerializeField] private float fakeCardOffset;
         [SerializeField] private float animationTime;
         [SerializeField] private float moveSpeed;
+
+        public bool isAI = false;
         
         private List<GameObject> cardDeckObjects;
         
@@ -66,6 +68,11 @@ namespace CardGame
                 
                 CardObject card = curCard.GetComponent<CardObject>();
                 card.CardType = tempDeck[idx].cardType;
+                
+                if (isAI)
+                {
+                    card.SetSpriteToBackSide();
+                }
                 
                 availableCards.Add(card);
                 tempDeck.RemoveAt(idx);

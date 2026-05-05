@@ -59,6 +59,14 @@ namespace CardGame
             }
         }
 
+        public void SetSpriteToBackSide()
+        {
+            GetComponent<Image>().sprite = cardImages[(int)CardType.BackSide];
+            
+            damageText.enabled = false;
+            healthText.enabled = false;
+        }
+        
         public void TakeDamage(float damageToApply)
         {
             health -= damageToApply;
@@ -76,8 +84,7 @@ namespace CardGame
             damage -= damageDecreaseRate;
             if (damage <= 0)
             {
-                onDeath?.Invoke();
-                Destroy(gameObject);
+                damage = 0;
             }
             
             damageText.text = damage.ToString("0");
