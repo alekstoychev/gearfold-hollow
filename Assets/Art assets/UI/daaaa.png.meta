@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 3cb0409eff145144d827d2b63c039722
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8399665990202302704
+    second: daaaa_0
+  - first:
+      213: -3285427511648381973
+    second: daaaa_1
+  - first:
+      213: -3691135207049994217
+    second: daaaa_2
+  - first:
+      213: 9209373579445066855
+    second: daaaa_3
+  - first:
+      213: 6759589640957836097
+    second: daaaa_4
+  - first:
+      213: -1832266375207541002
+    second: daaaa_5
+  - first:
+      213: -5124772296910269305
+    second: daaaa_6
+  - first:
+      213: -590745417081682867
+    second: daaaa_7
+  - first:
+      213: -1526818639704052957
+    second: daaaa_8
+  - first:
+      213: -3548155058128569512
+    second: daaaa_9
+  - first:
+      213: -8158251030708675233
+    second: daaaa_10
+  - first:
+      213: 5828812658621953240
+    second: daaaa_11
+  - first:
+      213: 7451245548545709226
+    second: daaaa_12
+  - first:
+      213: 6165695357195933712
+    second: daaaa_13
+  - first:
+      213: -4495233475505634172
+    second: daaaa_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: daaaa_0
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1268
+        width: 322
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01fdf0609446e6b80800000000000000
+      internalID: -8399665990202302704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_1
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 1274
+        width: 183
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be317e8c511d762d0800000000000000
+      internalID: -3285427511648381973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_2
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1275
+        width: 235
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 710e8dde51476ccc0800000000000000
+      internalID: -3691135207049994217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_3
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1274
+        width: 200
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76cd0b62a744ecf70800000000000000
+      internalID: 9209373579445066855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_4
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 1276
+        width: 182
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14bb3b0f6f2eecd50800000000000000
+      internalID: 6759589640957836097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_5
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1276
+        width: 393
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f6acd3807b7296e0800000000000000
+      internalID: -1832266375207541002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_6
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 1287
+        width: 200
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78496e78fb621e8b0800000000000000
+      internalID: -5124772296910269305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_7
+      rect:
+        serializedVersion: 2
+        x: 2011
+        y: 1287
+        width: 241
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d44082e4c204dc7f0800000000000000
+      internalID: -590745417081682867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_8
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 848
+        width: 273
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32baeff5986afcae0800000000000000
+      internalID: -1526818639704052957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_9
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 958
+        width: 287
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85bbd3806cb62cec0800000000000000
+      internalID: -3548155058128569512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_10
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 961
+        width: 181
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5d152e69e118ce80800000000000000
+      internalID: -8158251030708675233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_11
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 961
+        width: 181
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d4367b0b3a14e050800000000000000
+      internalID: 5828812658621953240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_12
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 959
+        width: 206
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa417471954286760800000000000000
+      internalID: 7451245548545709226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_13
+      rect:
+        serializedVersion: 2
+        x: 1731
+        y: 957
+        width: 353
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01850f69243f09550800000000000000
+      internalID: 6165695357195933712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daaaa_14
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 882
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484ca0688f8bd91c0800000000000000
+      internalID: -4495233475505634172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      daaaa_0: -8399665990202302704
+      daaaa_1: -3285427511648381973
+      daaaa_10: -8158251030708675233
+      daaaa_11: 5828812658621953240
+      daaaa_12: 7451245548545709226
+      daaaa_13: 6165695357195933712
+      daaaa_14: -4495233475505634172
+      daaaa_2: -3691135207049994217
+      daaaa_3: 9209373579445066855
+      daaaa_4: 6759589640957836097
+      daaaa_5: -1832266375207541002
+      daaaa_6: -5124772296910269305
+      daaaa_7: -590745417081682867
+      daaaa_8: -1526818639704052957
+      daaaa_9: -3548155058128569512
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
