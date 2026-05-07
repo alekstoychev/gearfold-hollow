@@ -1,3 +1,4 @@
+using System;
 using Interact;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,10 +14,20 @@ namespace Player
         [Header("Movement")]
         public float moveSpeed = 10.0f;
         public float horizontalDampening;
+        public bool canMove;
 
         [Header("Sprites")] 
         public Sprite walkingRightSprite;
         public Sprite walkingLeftSprite;
+        
+        [Header("Slope Handling")]
+        public float slopeRayLength = 0.8f;      
+        public float maxSlopeAngle = 45f;     
+        public LayerMask groundLayer;
+        private Vector2 slopeNormalPerp;         
+        private bool isOnSlope;
+        private bool wasOnSlope;
+        private float currentSlopeAngle;
         
         private PlayerInput playerInput;
         private Rigidbody2D rb;
@@ -30,8 +41,16 @@ namespace Player
         public Animator animator;
         public float horizontalMove = 0f;
         private Vector2 movement; 
+        
+        private float autoDirection = 0f;
+        private bool shouldAutoMove;
 
         #endregion
+
+        public bool CanMove
+        {
+            set => canMove = value;
+        }
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         private void Start()
@@ -66,6 +85,16 @@ namespace Player
             {
                 Debug.LogError($"{name} did not find Sprite Renderer component.");
             }
+            
+            canMove = true;
+        }
+
+        private void OnDestroy()
+        {
+            if (interactAction != null)
+            {
+                interactAction.performed -= OnInteractPerformed;
+            }
         }
 
         // Update is called once per frame
@@ -73,22 +102,62 @@ namespace Player
         {
             //changing the animation from idle to running when moving
             horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
+            if (!canMove) horizontalMove = 0f;
+            if (shouldAutoMove) horizontalMove = autoDirection * moveSpeed;
+            
             animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+            if (horizontalMove != 0)
+            {
+                FootSteps.walking = true;
+            }
+            else
+            {
+                FootSteps.walking = false;
+            }
 
             // mirroring the animation when going left. I feel like this might not be optimal but it works
             movement = new Vector2(Input.GetAxis("Horizontal"), 0).normalized;
+            if (!canMove) horizontalMove = 0f;
+            if (shouldAutoMove) movement.x = autoDirection;
+            
             bool mirrored = movement.x < 0;
             if (movement.x != 0)
             {
-               this.transform.rotation = Quaternion.Euler(new Vector3(0f, mirrored ? 180f : 0f, 0f));
+                this.transform.rotation = Quaternion.Euler(new Vector3(0f, mirrored ? 180f : 0f, 0f));
             }
+            
+            if (shouldAutoMove)
+            {
+                rb.linearVelocityX = autoDirection *  moveSpeed;
+            }
+            else
+            {
+                Move();
+            }
+        }
 
-            Move();
+        public void MoveToAnotherArea(float direction)
+        {
+            shouldAutoMove = true;
+            autoDirection = direction;
+        }
+
+        public void StopMoveToAnotherArea()
+        {
+            shouldAutoMove = false;
+            autoDirection = 0f;
         }
 
         private void FixedUpdate()
         {
+            UpdateSlopeInfo();
             CheckSpriteRotation();
+            
+            if (isOnSlope && currentSlopeAngle > 15f && rb.linearVelocityY > -0.1f)
+            {
+                rb.AddForce(Vector2.down * 3f, ForceMode2D.Force);
+            }
         }
 
         private void OnInteractPerformed(InputAction.CallbackContext callbackContext)
@@ -104,9 +173,12 @@ namespace Player
                 {
                     continue;
                 }
-                
-                interactable.Interact();
-                break;
+
+                if (interactable.isInteractable)
+                {
+                    interactable.Interact();
+                    break;
+                }
             }
         }
 
@@ -125,17 +197,78 @@ namespace Player
 
         private void Move()
         {
+            if (!canMove)
+            {
+                rb.linearVelocity = Vector2.zero;
+                return;
+            }
+            
             if (moveAction.IsPressed())
             {
-                rb.linearVelocityX = moveAction.ReadValue<Vector2>().x * moveSpeed;
+                float inputX = moveAction.ReadValue<Vector2>().x;
+                float targetVelocityX = inputX * moveSpeed;
+
+                if (isOnSlope)
+                {
+                    Vector2 slopeMove = slopeNormalPerp * targetVelocityX;
+                    rb.linearVelocity = new Vector2(slopeMove.x, slopeMove.y);
+                }
+                else
+                {
+                    rb.linearVelocityX = targetVelocityX;
+
+                    if (wasOnSlope && rb.linearVelocityY > 0)
+                    {
+                        rb.linearVelocity = new Vector2(rb.linearVelocityX, 0);
+                    }
+                }
             }
             else
             {
-                if (rb.linearVelocity.x != 0)
+                if (!isOnSlope)
                 {
-                    rb.linearVelocityX *= horizontalDampening *  Time.deltaTime;
+                    rb.linearVelocityX *= horizontalDampening * Time.deltaTime;
+                }
+                else if (isOnSlope)
+                {
+                    rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, horizontalDampening * Time.deltaTime);
                 }
             }
+            
+            wasOnSlope = isOnSlope;
+        }
+        
+        private bool IsGrounded(out RaycastHit2D hit)
+        {
+            Vector2 origin = collision.bounds.center - new Vector3(0, collision.bounds.extents.y);
+            hit = Physics2D.Raycast(origin, Vector2.down, slopeRayLength, groundLayer);
+            return hit.collider != null;
+        }
+
+        private void UpdateSlopeInfo()
+        {
+            RaycastHit2D hit;
+            if (IsGrounded(out hit))
+            {
+                currentSlopeAngle = Vector2.Angle(hit.normal, Vector2.up);
+                isOnSlope = currentSlopeAngle > 0 && currentSlopeAngle <= maxSlopeAngle;
+        
+                if (isOnSlope)
+                {
+                    slopeNormalPerp = new Vector2(hit.normal.y, -hit.normal.x);
+                }
+            }
+            else
+            {
+                isOnSlope = false;
+                currentSlopeAngle = 0;
+            }
+        }
+        
+        public void Lantern()
+        {
+            animator.SetBool("GotLantern", true);
         }
     }
 }
+

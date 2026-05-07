@@ -1,25 +1,30 @@
-using System;
-using DialogueSystem;
 using UnityEngine;
 
 namespace Interact
 {
-    public class Interactable : MonoBehaviour
+    public abstract class Interactable : MonoBehaviour
     {
-        #region Variables
-        [Header("Dialogue")]
-        public GameObject textPopup;
-        public Dialogue dialogue;
-    
         [Header("Interactable")]
         public bool isInteractable;
-
-        public static event Action<Dialogue> OnInteract;
-        #endregion
+        public GameObject textPopup;
 
         private void Awake()
         {
             textPopup.SetActive(false);
+        }
+        
+        public void SetInteractable(bool interactable)
+        {
+            isInteractable = interactable;
+            
+            if (isInteractable)
+            {
+                textPopup.SetActive(true);
+            }
+            else if (!isInteractable)
+            {
+                textPopup.SetActive(false);
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -38,9 +43,6 @@ namespace Interact
             }
         }
 
-        public void Interact()
-        {
-            OnInteract?.Invoke(dialogue);
-        }
+        public abstract void Interact();
     }
 }

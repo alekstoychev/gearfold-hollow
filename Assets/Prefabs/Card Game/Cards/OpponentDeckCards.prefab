@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5083462305441680873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5747399147117142987}
+  - component: {fileID: 7266155424772900714}
+  m_Layer: 5
+  m_Name: OpponentDeckCards
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5747399147117142987
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5083462305441680873}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 200, y: 100}
+  m_SizeDelta: {x: 305.30005, y: 348.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7266155424772900714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5083462305441680873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ea658d04c7f455e96a371de65180c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardGame.CardDeck
+  defaultCards:
+  - prefab: {fileID: 9173447312215944340, guid: 1635a1fbeeddc4833a2752df0814f709, type: 3}
+    cardType: 1
+  - prefab: {fileID: 9173447312215944340, guid: 1635a1fbeeddc4833a2752df0814f709, type: 3}
+    cardType: 2
+  - prefab: {fileID: 9173447312215944340, guid: 1635a1fbeeddc4833a2752df0814f709, type: 3}
+    cardType: 3
+  - prefab: {fileID: 9173447312215944340, guid: 1635a1fbeeddc4833a2752df0814f709, type: 3}
+    cardType: 4
+  - prefab: {fileID: 9173447312215944340, guid: 1635a1fbeeddc4833a2752df0814f709, type: 3}
+    cardType: 5
+  - prefab: {fileID: 9173447312215944340, guid: 1635a1fbeeddc4833a2752df0814f709, type: 3}
+    cardType: 5
+  - prefab: {fileID: 9173447312215944340, guid: 1635a1fbeeddc4833a2752df0814f709, type: 3}
+    cardType: 4
+  - prefab: {fileID: 9173447312215944340, guid: 1635a1fbeeddc4833a2752df0814f709, type: 3}
+    cardType: 3
+  - prefab: {fileID: 9173447312215944340, guid: 1635a1fbeeddc4833a2752df0814f709, type: 3}
+    cardType: 2
+  - prefab: {fileID: 9173447312215944340, guid: 1635a1fbeeddc4833a2752df0814f709, type: 3}
+    cardType: 1
+  cardHand: {fileID: 0}
+  defaultCardCount: 5
+  hand: {fileID: 0}
+  defaultPosition: {fileID: 0}
+  fakeCardPrefab: {fileID: 3660608392902437012, guid: 1ef236ea584764300ae07943eb3a0d62, type: 3}
+  fakeCardOffset: 20
+  animationTime: 0.8
+  moveSpeed: 4

@@ -6,11 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/IntroScene.unity
+    guid: b668a9845d8d36a408361efe9156d6e4
   - enabled: 1
-    path: Assets/Scenes/TestDummyScene.unity
-    guid: a7660d50fd2c946679b2c318b044ec10
+    path: Assets/Scenes/Docks.unity
+    guid: 0166d415b5b177c4fbf7b06e91ae279f
+  - enabled: 1
+    path: Assets/Scenes/MainStreet.unity
+    guid: f4293a79528042b41be55e6af1218493
+  - enabled: 1
+    path: Assets/Scenes/CardsGameTest.unity
+    guid: c7cb31d2e57474eb5a9c586b2cc5136e
+  - enabled: 1
+    path: Assets/Scenes/ClockTower.unity
+    guid: da9054a4704847c4cb3e67058b371e0e
+  - enabled: 1
+    path: Assets/Scenes/FortuneTellerHut.unity
+    guid: 30b33cfa55eb44e08bf1872158b8c9a7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

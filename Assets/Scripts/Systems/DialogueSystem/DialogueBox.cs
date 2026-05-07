@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
+using Interact;
+using Player;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace DialogueSystem
@@ -11,7 +14,6 @@ namespace DialogueSystem
         #region Variables
         [Header("Dialogue Box")]
         public Image dialogueBoxBackground;
-        public Image dialogueBoxBackground2;
         public TextMeshProUGUI speakerTitleBox;
         public TextMeshProUGUI speakerTextBox;
         public Image speakerImage;
@@ -26,16 +28,15 @@ namespace DialogueSystem
 
         private bool canContinueDialogue = true;
         private Dialogue currentDialogue;
+        private bool isOnCooldown;
 
         public event Action<bool> OnContinueDialogue;
         #endregion
     
         public void ShowDialogueBox(Dialogue dialogueToAdd)
         {
-            if (!canContinueDialogue)
-            {
-                return;
-            }
+            if (!canContinueDialogue) return;
+            if (isOnCooldown) return;
             
             currentDialogue = dialogueToAdd;
             
@@ -43,7 +44,6 @@ namespace DialogueSystem
             fullDialogue = dialogueToAdd.GetDialogue();
             
             dialogueBoxBackground.enabled = true;
-            dialogueBoxBackground2.enabled = true;
             speakerTitleBox.enabled = true;
             speakerTextBox.enabled = true;
             speakerTextBox.text = "";
@@ -59,36 +59,74 @@ namespace DialogueSystem
 
         public void HideDialogueBox()
         {
+            if (isOnCooldown) return;
+            
             dialogueBoxBackground.enabled = false;
-            dialogueBoxBackground2.enabled = false;
             speakerTitleBox.enabled = false;
             speakerTextBox.enabled = false;
-            speakerImage.enabled = false;
-            speakerImage.sprite = null;
+
+            if (SceneManager.GetActiveScene().name != "FortuneTellerHut")
+            {
+                speakerImage.enabled = false;
+                speakerImage.sprite = null;
+            }
             
             doTypeWriter = false;
             
             //unityevent complete
             
-            bool shouldExit = false;
             if (currentDialogue.GetCompleteObjectiveAfterText())
             {
-                shouldExit = true;
-            }
-            
-            currentDialogue.TriggerEndOfDialogue();
-            if (shouldExit)
-            {
+                currentDialogue.TriggerEndOfDialogue();
+                
+                if (SceneManager.GetActiveScene().name != "FortuneTellerHut")
+                {
+                    PlayerController player1 = FindFirstObjectByType<PlayerController>();
+                    player1.canMove = true;
+                }
+
                 return;
             }
             
+            currentDialogue.TriggerEndOfDialogue();
+
+            if (currentDialogue.IsInObjective())
+            {
+                canContinueDialogue = false;
+                StartCoroutine(ShowDialogueAfterDelay());
+                return;
+            }
+
+            if (SceneManager.GetActiveScene().name != "FortuneTellerHut")
+            {
+                PlayerController player = FindFirstObjectByType<PlayerController>();
+                player.canMove = true;
+            }
+        
+            
+            /*
             Debug.Log($"Checking continue after dialogue {currentDialogue.GetContinueAfterText()}, {currentDialogue.GetWaitTimeAfterText()}");
             if (currentDialogue.GetContinueAfterText())
             {
                 canContinueDialogue = false;
                 StartCoroutine(ShowDialogueAfterDelay());
                 Debug.Log($"Activating Coroutine.");
+            }*/
+        }
+
+        public bool TryHideDialogueBox()
+        {
+            if (doTypeWriter)
+            {
+                speakerTextBox.text += fullDialogue;
+                doTypeWriter = false;
+                currentTypewriterTimer = 0;
+
+                return false;
             }
+            
+            HideDialogueBox();
+            return true;
         }
 
         private void Update()
@@ -122,9 +160,11 @@ namespace DialogueSystem
         
         private IEnumerator ShowDialogueAfterDelay()
         {
-            yield return new WaitForSeconds(currentDialogue.GetWaitTimeAfterText());
+            isOnCooldown = true;
+            yield return new WaitForSeconds(1.2f);
             
             canContinueDialogue = true;
+            isOnCooldown = false;
             ShowDialogueBox(currentDialogue);
             OnContinueDialogue?.Invoke(true);
         }

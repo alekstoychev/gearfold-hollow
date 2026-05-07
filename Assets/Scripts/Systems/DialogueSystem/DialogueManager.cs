@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
 using Interact;
-using ObjectiveSystem;
+using Player;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public enum Expression
@@ -26,8 +27,8 @@ namespace DialogueSystem
     public struct ObjectiveDialogueText
     {
         public DialogueText dialogueText;
-        public float autoContinueDelay;
-        public bool autoContinue;
+        //public float autoContinueDelay;
+        //public bool autoContinue;
         public bool completeObjectiveAfterText;
         
         public UnityEvent onDialogueContinue;
@@ -49,27 +50,41 @@ namespace DialogueSystem
         [SerializeField] private List<ObjectiveDialogueText> objectiveDialoguesText;
         private int currentIdx = -1;
 
-        public float GetWaitTimeAfterText()
+        /*public float GetWaitTimeAfterText()
         {
             return objectiveDialoguesText[currentIdx].autoContinueDelay;
-        }
+        }*/
 
         public void TriggerEndOfDialogue()
         {
-            objectiveDialoguesText[currentIdx].onDialogueContinue?.Invoke();
+            if (currentIdx < objectiveDialoguesText.Count && currentIdx >= 0)
+            {
+                objectiveDialoguesText[currentIdx].onDialogueContinue?.Invoke();
+            }
         }
 
         public bool GetCompleteObjectiveAfterText()
         {
-            return objectiveDialoguesText[currentIdx].completeObjectiveAfterText;
+            if (currentIdx < objectiveDialoguesText.Count && currentIdx >= 0)
+            {
+                return objectiveDialoguesText[currentIdx].completeObjectiveAfterText;
+            }
+            
+            Debug.LogWarning($"Invalid currentIdx: {currentIdx}");
+            return true;
         }
 
         public Expression GetExpression()
         {
-            return objectiveDialoguesText[currentIdx].dialogueText.expression;
+            if (currentIdx < objectiveDialoguesText.Count)
+            {
+                return objectiveDialoguesText[currentIdx].dialogueText.expression;
+            }
+            
+            return Expression.Expression1;
         }
 
-        public bool GetContinueAfterText()
+        /*public bool GetContinueAfterText()
         {
             if (currentIdx >= 0 && currentIdx < objectiveDialoguesText.Count)
             {
@@ -77,13 +92,16 @@ namespace DialogueSystem
             }
             
             return false;
-        }
+        }*/
 
         public string GetNewObjectiveDialogue()
         {
+            if (!IsInObjectiveDialogue()) return GetRandomDialogue();
+            
+            currentIdx++;
             if (currentIdx < objectiveDialoguesText.Count)
             {
-                return objectiveDialoguesText[++currentIdx];
+                return objectiveDialoguesText[currentIdx];
             }
             
             Debug.LogError($"No objective dialogue available at {currentIdx}");
@@ -133,30 +151,52 @@ namespace DialogueSystem
         [Tooltip("Whenever the object is interacted with when involved in an objective")]
         [SerializeField] private List<ObjectiveDialogue> objectiveDialogues;
 
-        public bool isInvolved;
+        //public bool isInvolved;
 
         //public event Action OnObjectiveDialogueComplete;
         
         private int lastDialogueIdx;
+        public int currentObjectiveIdx = 0;
         #endregion
+
+        public bool IsInObjective()
+        {
+            return currentObjectiveIdx < objectiveDialogues.Count && objectiveDialogues.Count > 0;
+        }
 
         /*public void CompleteObjectiveDialogue()
         {
             OnObjectiveDialogueComplete?.Invoke();
         }*/
 
+        public void ProgressObjectiveDialogue()
+        {
+            if (IsInObjective())
+            {
+                currentObjectiveIdx++;
+            }
+        }
+
+        public void SetObjectiveIndex(int idx)
+        {
+            currentObjectiveIdx = idx;
+        }
+
         public void TriggerEndOfDialogue()
         {
-            GetCurrentObjective().TriggerEndOfDialogue();
+            if (IsInObjective())
+            {
+                objectiveDialogues[currentObjectiveIdx].TriggerEndOfDialogue();
+            }
         }
 
         public Sprite GetExpressionSprite()
         {
             Expression expression = randomDialogue[lastDialogueIdx].expression;
             
-            if (GetCurrentObjective() != null)
+            if (IsInObjective())
             {
-                expression = GetCurrentObjective().GetExpression();
+                expression = objectiveDialogues[currentObjectiveIdx].GetExpression();
             }
             
             switch (expression)
@@ -170,7 +210,7 @@ namespace DialogueSystem
             }
         }
 
-        public float GetWaitTimeAfterText()
+        /*public float GetWaitTimeAfterText()
         {
             if (GetCurrentObjective() != null)
             {
@@ -188,13 +228,13 @@ namespace DialogueSystem
             }
             
             return false;
-        }
+        }*/
         
         public bool GetCompleteObjectiveAfterText()
         {
-            if (GetCurrentObjective() != null)
+            if (IsInObjective())
             {
-                return GetCurrentObjective().GetCompleteObjectiveAfterText();
+                return objectiveDialogues[currentObjectiveIdx].GetCompleteObjectiveAfterText();
             }
             
             return false;
@@ -202,12 +242,9 @@ namespace DialogueSystem
 
         public string GetDialogue()
         {
-            if (isInvolved)
+            if (IsInObjective())
             {
-                if (GetCurrentObjective()  != null)
-                {
-                    return GetCurrentObjective().GetNewObjectiveDialogue();
-                }
+                return objectiveDialogues[currentObjectiveIdx].GetNewObjectiveDialogue();
             }
             
             return GetRandomDialogue();
@@ -215,6 +252,11 @@ namespace DialogueSystem
         
         private string GetRandomDialogue()
         {
+            if (randomDialogue.Count == 1)
+            {
+                return randomDialogue[0].text;    
+            }
+            
             int randomIndex = Random.Range(0, randomDialogue.Count);
             if (randomDialogue.Count > 1)
             {
@@ -232,7 +274,7 @@ namespace DialogueSystem
             return randomDialogue[randomIndex].text;
         }
 
-        private ObjectiveDialogue GetCurrentObjective()
+        /*private ObjectiveDialogue GetCurrentObjective()
         {
             foreach (ObjectiveDialogue objectiveDialogue in objectiveDialogues)
             {
@@ -243,16 +285,13 @@ namespace DialogueSystem
             }
 
             return null;
-        }
+        }*/
 
         public bool CanRemoveDialogue()
         {
-            if (isInvolved)
+            if (IsInObjective())
             {
-                if (GetCurrentObjective()  != null)
-                {
-                   return !GetCurrentObjective().IsInObjectiveDialogue();
-                }
+               return !objectiveDialogues[currentObjectiveIdx].IsInObjectiveDialogue();
             }
             
             return true;
@@ -267,8 +306,14 @@ namespace DialogueSystem
 
         private void Awake()
         {
-            Interactable.OnInteract += TriggerDialogue;
+            InteractableNPC.OnDialogueInteract += TriggerDialogue;
             dialogueBox.OnContinueDialogue += OnContinueDialogueTriggered;
+        }
+        
+        private void OnDestroy()
+        {
+            InteractableNPC.OnDialogueInteract -= TriggerDialogue;
+            dialogueBox.OnContinueDialogue -= OnContinueDialogueTriggered;
         }
 
         private void OnContinueDialogueTriggered(bool canContinue)
@@ -280,13 +325,18 @@ namespace DialogueSystem
         {
             if (isDialogueActive)
             {
-                DeactivateDialogue();
-                isDialogueActive = false;
+                TryDeactivateDialogue();
             }
             else
             {
                 ActivateDialogue(dialogue);
                 isDialogueActive = true;
+
+                if (SceneManager.GetActiveScene().name != "FortuneTellerHut")
+                {
+                    PlayerController player = FindFirstObjectByType<PlayerController>();
+                    player.canMove = false;
+                }
             }
         }
 
@@ -295,9 +345,12 @@ namespace DialogueSystem
             dialogueBox.ShowDialogueBox(dialogue);
         }
 
-        public void DeactivateDialogue()
+        public void TryDeactivateDialogue()
         {
-            dialogueBox.HideDialogueBox();
+            if (dialogueBox.TryHideDialogueBox())
+            {
+                isDialogueActive = false;
+            }
         }
     }
     

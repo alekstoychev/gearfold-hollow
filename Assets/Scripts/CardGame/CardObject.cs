@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -8,11 +9,16 @@ namespace CardGame
     [Serializable]
     public enum CardType
     {
-        Type1,
-        Type2,
-        Type3,
-        Type4,
-        Type5
+        BackSide,
+        Magician,
+        KingOfSwords,
+        TheFool,
+        WheelOfFortune,
+        Justice,
+        Death,
+        TheRat,
+        TheTower,
+        TheMoon
     }
     
     public class CardObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
@@ -27,6 +33,7 @@ namespace CardGame
         [SerializeField] private float health;
         [SerializeField] private float damageDecreaseRate;
         [SerializeField] private CardType cardType;
+        [SerializeField] private List<Sprite> cardImages;
 
         private int cardIndex;
 
@@ -36,13 +43,40 @@ namespace CardGame
         public float Health { get => health; }
         public CardType CardType { get => cardType; set => cardType = value; }
 
+        private void Awake()
+        {
+            damageText.text = damage.ToString("0");
+            healthText.text = health.ToString("0");
+        }
+
+        public void UpdateSprite(bool showStats)
+        {
+            GetComponent<Image>().sprite = cardImages[(int)cardType];
+            if (showStats)
+            {
+                damageText.enabled = true;
+                healthText.enabled = true;
+            }
+        }
+
+        public void SetSpriteToBackSide()
+        {
+            GetComponent<Image>().sprite = cardImages[(int)CardType.BackSide];
+            
+            damageText.enabled = false;
+            healthText.enabled = false;
+        }
+        
         public void TakeDamage(float damageToApply)
         {
             health -= damageToApply;
             if (health <= 0)
             {
                 onDeath?.Invoke(); 
+                Destroy(gameObject);
             }
+            
+            healthText.text = health.ToString("0");
         }
 
         public void DecreaseDamage()
@@ -50,8 +84,10 @@ namespace CardGame
             damage -= damageDecreaseRate;
             if (damage <= 0)
             {
-                onDeath?.Invoke();
+                damage = 0;
             }
+            
+            damageText.text = damage.ToString("0");
         }
 
         public void SetManager(HandManager handManagerToSet)
@@ -82,6 +118,11 @@ namespace CardGame
         public void DisableButton()
         {
             GetComponent<Button>().enabled = false;
+        }
+
+        public void EnableButton()
+        {
+            GetComponent<Button>().enabled = true;
         }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace CardGame
 {
@@ -23,21 +24,27 @@ namespace CardGame
     public class HandManager : MonoBehaviour
     {
         [Header("Layout")]
-        [SerializeField] private Vector2 arcCenter;
-        [SerializeField] private float arcRadius;
-        [SerializeField] private float middleAngle;
-        [SerializeField] private float angleSpread;
+        [SerializeField] protected Vector2 arcCenter;
+        [SerializeField] protected float arcRadius;
+        [SerializeField] protected float middleAngle;
+        [SerializeField] protected float angleSpread;
+        [SerializeField] private float pushOffset;
+        [SerializeField] private float endCardMultiplier;
+        [SerializeField] private Vector2 disabledDeckPosOffset;
+        [SerializeField] private float disabledDeckOffset;
 
         [Header("Hover offset")] 
-        [SerializeField] private float hoverOffset;
-        [SerializeField] private float selectOffset;
+        [SerializeField] protected float hoverOffset;
+        [SerializeField] protected float selectOffset;
 
         [Header("Animation")] 
-        [SerializeField] private float moveDuration;
-        [SerializeField] private AnimationCurve moveCurve;
+        [SerializeField] protected float moveDuration;
+        [SerializeField] protected AnimationCurve moveCurve;
         
         [Header("Playing cards")]
         [SerializeField] private RectTransform playingCardPosition;
+        [SerializeField] private CombatManager combatManager;
+        [SerializeField] private bool isAI;
         
 #if UNITY_EDITOR
         [Header("Debug")] 
@@ -105,17 +112,42 @@ namespace CardGame
         }
 #endif
         
-        private List<CardObject> cards = new List<CardObject>();
-        private List<Coroutine> moveCoroutines = new List<Coroutine>();
+        protected List<CardObject> cards = new List<CardObject>();
+        protected List<Coroutine> moveCoroutines = new List<Coroutine>();
+        protected int hoveredCardIndex = -1;
+        protected int selectedCardIndex = -1;
+        protected bool isCardBeingPlayed;
+        
         private bool isZoneHovered;
-        private int hoveredCardIndex = -1;
-        private int selectedCardIndex = -1;
-        private bool isCardBeingPlayed;
 
-        public void AddCard(CardObject newCard)
+        public Action onLostAllCards;
+
+        public int GetCurrentCardAmount()
+        {
+            return cards.Count;
+        }
+
+        private void CharacterLostCard()
+        {
+            if (!isCardBeingPlayed) return;
+
+            if (GetCurrentCardAmount() == 0)
+            {
+                onLostAllCards.Invoke();
+                return;
+            }
+            
+            isCardBeingPlayed = false;
+            selectedCardIndex = -1;
+            ActivateAllCards();
+        }
+
+        public virtual void AddCard(CardObject newCard)
         {
             newCard.SetManager(this);
             newCard.SetIndex(cards.Count);
+
+            newCard.onDeath += CharacterLostCard;
             
             cards.Add(newCard);
             moveCoroutines.Add(null);
@@ -162,7 +194,7 @@ namespace CardGame
             UpdateAllCards();
         }
 
-        public void SetCardHovered(int cardIndex, bool isActive)
+        public virtual void SetCardHovered(int cardIndex, bool isActive)
         {
             if (isCardBeingPlayed) return;
             if (cardIndex < 0 || cardIndex >= cards.Count) return;
@@ -175,7 +207,7 @@ namespace CardGame
             UpdateAllCards();
         }
 
-        public void OnCardSelect(int cardIndex)
+        public virtual void OnCardSelect(int cardIndex)
         {
             selectedCardIndex = cardIndex;
             isZoneHovered = false;
@@ -186,16 +218,26 @@ namespace CardGame
             {
                 StopCoroutine(moveCoroutines[cardIndex]);
             }
-            
+
             Vector2 targetPosition = playingCardPosition.anchoredPosition;
             Quaternion targetRotation = playingCardPosition.rotation;
+            Vector3 targetScale = playingCardPosition.localScale;
             
             DeactivateAllCards();
             
-            moveCoroutines[cardIndex] = StartCoroutine(MoveCard(cards[cardIndex].GetComponent<RectTransform>(), targetPosition, targetRotation, cardIndex,true));
+            moveCoroutines[cardIndex] = StartCoroutine(MoveCard(cards[cardIndex].GetComponent<RectTransform>(), targetPosition, targetRotation, targetScale, cardIndex,true));
+
+            if (isAI)
+            {
+                StartCoroutine(combatManager.AISelected(cards[cardIndex]));
+            }
+            else
+            {
+                StartCoroutine(combatManager.PlayerSelected(cards[cardIndex]));
+            }
         }
 
-        private void DeactivateAllCards()
+        public virtual void DeactivateAllCards()
         {
             foreach (CardObject card in cards)
             {
@@ -203,7 +245,15 @@ namespace CardGame
             }
         }
 
-        private void UpdateAllCards()
+        public virtual void ActivateAllCards()
+        {
+            foreach (CardObject card in cards)
+            {
+                card.EnableButton();
+            }
+        }
+
+        public virtual void UpdateAllCards()
         {
             int cardsAmount = cards.Count;
             if (cardsAmount <= 0) return;
@@ -220,7 +270,36 @@ namespace CardGame
                 }
                 
                 float value = cardsAmount > 1 ? (float)i / (cards.Count - 1) : 0.5f;
-                float angleDeg = Mathf.Lerp(startAngle, endAngle, value);
+                
+                float finalStartAngle = startAngle;
+                float finalEndAngle = endAngle;
+                if (hoveredCardIndex != -1)
+                {
+                    if (hoveredCardIndex == i - 1)
+                    {
+                        if (i == cards.Count - 1)
+                        {            
+                            finalEndAngle = middleAngle + halfGaps * (angleSpread + pushOffset * endCardMultiplier);
+                        }
+                        else
+                        {
+                            value += pushOffset;
+                        }
+                    }
+                    else if (hoveredCardIndex == i + 1)
+                    {
+                        if (i == 0)
+                        {
+                            finalStartAngle = middleAngle - halfGaps * (angleSpread +  pushOffset * endCardMultiplier);
+                        }
+                        else
+                        {
+                            value -= pushOffset;
+                        }
+                    }
+                }
+                
+                float angleDeg = Mathf.Lerp(finalStartAngle, finalEndAngle, value);
                 float angleRad = angleDeg * Mathf.Deg2Rad;
                 
                 Vector2 direction = new  Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
@@ -230,6 +309,7 @@ namespace CardGame
                 Vector2 targetPosition;
                 Quaternion targetRotation = baseRotation; 
                 
+                
                 if (i == hoveredCardIndex)
                 {
                     targetPosition = basePosition + direction * selectOffset;
@@ -238,22 +318,31 @@ namespace CardGame
                 {
                     targetPosition = basePosition + direction * hoverOffset;
                 }
+                else if (isCardBeingPlayed)
+                {
+                    basePosition = (arcCenter - disabledDeckPosOffset) + direction * (arcRadius - disabledDeckOffset);
+                    targetPosition = basePosition + direction * hoverOffset;
+                }
                 else
                 {
                     targetPosition = basePosition;
                 }
+
+                Vector3 targetScale = cards[i].GetComponent<RectTransform>().localScale;
                 
-                
-                moveCoroutines[i] = StartCoroutine(MoveCard(cards[i].GetComponent<RectTransform>(), targetPosition, targetRotation, i));
+                moveCoroutines[i] = StartCoroutine(MoveCard(cards[i].GetComponent<RectTransform>(), targetPosition, targetRotation, targetScale, i));
             }
         }
 
-        private IEnumerator MoveCard(RectTransform rectTransform, Vector2 targetPosition, Quaternion targetRotation, int cardIndex, bool isSelected = false)
+        protected virtual IEnumerator MoveCard(RectTransform rectTransform, Vector2 targetPosition, Quaternion targetRotation, Vector3 targetScale, int cardIndex, bool isSelected = false)
         {
             Vector2 startPos = rectTransform.anchoredPosition;
             Quaternion startRot = rectTransform.rotation;
+            Vector3 startScale = rectTransform.localScale;
 
             float elapsedTime = 0f;
+            float midPoint = moveDuration / 2;
+            bool isFlippedCard = false;
             while (elapsedTime < moveDuration)
             {
                 elapsedTime += Time.deltaTime;
@@ -261,12 +350,20 @@ namespace CardGame
                 float curveValue = moveCurve.Evaluate(t);
                 rectTransform.anchoredPosition = Vector2.Lerp(startPos, targetPosition, curveValue);
                 rectTransform.rotation = Quaternion.Lerp(startRot, targetRotation, curveValue);
+                rectTransform.localScale = Vector3.Lerp(startScale, targetScale, curveValue);
+
+                if (elapsedTime >= midPoint && !isFlippedCard && isSelected)
+                {
+                    cards[selectedCardIndex].UpdateSprite(true);
+                    isFlippedCard = true;
+                }
 
                 yield return null;
             }
 
             rectTransform.anchoredPosition = targetPosition;
             rectTransform.rotation = targetRotation;
+            rectTransform.localScale = targetScale;
 
             if (cardIndex >= 0 && cardIndex < moveCoroutines.Count)
             {
@@ -275,6 +372,8 @@ namespace CardGame
 
             if (isSelected)
             {
+                rectTransform.SetParent(playingCardPosition);
+                rectTransform.anchoredPosition = new Vector2(0,0);
                 RemoveCard(cards[selectedCardIndex]);
             }
         }

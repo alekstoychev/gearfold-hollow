@@ -103,10 +103,10 @@ TextureImporter:
       name: Timeline 1_0006_0
       rect:
         serializedVersion: 2
-        x: 883
-        y: 105
-        width: 446
-        height: 556
+        x: 1127
+        y: 184
+        width: 224
+        height: 590
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
