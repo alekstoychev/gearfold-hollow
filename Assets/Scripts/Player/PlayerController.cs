@@ -107,6 +107,15 @@ namespace Player
             
             animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
+            if (horizontalMove != 0)
+            {
+                FootSteps.walking = true;
+            }
+            else
+            {
+                FootSteps.walking = false;
+            }
+
             // mirroring the animation when going left. I feel like this might not be optimal but it works
             movement = new Vector2(Input.GetAxis("Horizontal"), 0).normalized;
             if (!canMove) horizontalMove = 0f;
